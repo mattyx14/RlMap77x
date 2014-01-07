@@ -3,9 +3,9 @@ function onUse(cid, item, frompos, item2, topos)
 	demonpos2 = {x = 33065, y = 31622, z = 15}
 	demonpos3 = {x = 33061, y = 31628, z = 15}
 	demonpos4 = {x = 33065, y = 31628, z = 15}
-	if item.uid = = 10023 then
+	if item.uid == 10023 then
 		queststatus = getPlayerStorageValue(cid, 10023)
-		if queststatus = = -1 then
+		if queststatus == -1 then
 			doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "You have found a bag.")
 			bag = doPlayerAddItem(cid, 1987, 1)
 			doAddContainerItem(bag, 2165, 1)

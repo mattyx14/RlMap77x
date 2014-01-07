@@ -1,10 +1,10 @@
 local coins = {
 	[ITEM_GOLD_COIN] = {
 		to = ITEM_PLATINUM_COIN, effect = COLOR_YELLOW
-	},
+	}, 
 	[ITEM_PLATINUM_COIN] = {
 		from = ITEM_GOLD_COIN, to = ITEM_CRYSTAL_COIN, effect = COLOR_LIGHTBLUE
-	},
+	}, 
 	[ITEM_CRYSTAL_COIN] = {
 		from = ITEM_PLATINUM_COIN, effect = COLOR_TEAL
 	}

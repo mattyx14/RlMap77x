@@ -12,7 +12,7 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 		if getPlayerStorageValue(cid, item.uid) == -1 then
 			if playerCap >= itemWeight then
 				doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, 'You have found a ' .. getItemNameById(item.uid) .. '.')
-				doPlayerAddItem(cid, item.uid ,1)
+				doPlayerAddItem(cid, item.uid , 1)
 				setPlayerStorageValue(cid, item.uid, 1)
 			else
 				doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, 'You have found a ' .. getItemNameById(item.uid) .. ' weighing ' .. itemWeight .. ' oz it\'s too heavy.')

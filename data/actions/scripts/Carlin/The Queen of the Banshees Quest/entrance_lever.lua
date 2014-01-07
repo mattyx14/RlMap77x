@@ -8,7 +8,7 @@ function onUse(cid, item, frompos, item2, topos)
 	if item.actionid == 9007 and item.itemid == 1945 and getmw.itemid == 1497 then
 		doRemoveItem(getmw.uid, 1)
 		doCreateItem(410, stairpos)
-		doTransformItem(item.uid, item.itemid+1)  
+		doTransformItem(item.uid, item.itemid+1)
 	elseif item.actionid == 9007 and item.itemid == 1946 and getmw.itemid == 0 then	
 		doRemoveItem(getstair.uid, 1)
 		doCreateItem(407, blackpos)

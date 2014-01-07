@@ -38,7 +38,7 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 
 	local random_condition = conditions[math.random(#conditions)]
 	if(random_condition == CONDITION_ATTRIBUTES) then
-		setConditionParam(condition[CONDITION_ATTRIBUTES], attributes[math.random(#attributes)], math.random(3,15))
+		setConditionParam(condition[CONDITION_ATTRIBUTES], attributes[math.random(#attributes)], math.random(3, 15))
 	end
 
 	if(not doAddCondition(cid, condition[random_condition])) then

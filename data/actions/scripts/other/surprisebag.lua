@@ -7,7 +7,7 @@ local config = {
 	--}
 	
 	-- blue
-	[6570] = {		
+	[6570] = {
 		{ rate = 1132, item = 6280, count = { const = 1 }},
 		{ rate = 1132, item = 2114, count = { const = 1 }},
 		{ rate = 991, item = 6575, count = { const = 1 }},
@@ -43,9 +43,9 @@ local config = {
 
 local sumOfRate = {}
 
-for k,v in pairs(config) do
+for k, v in pairs(config) do
 	sumOfRate[k] = 0
-	for k2,v2 in pairs(v) do
+	for k2, v2 in pairs(v) do
 		sumOfRate[k] = sumOfRate[k] + v2.rate
 	end
 end
@@ -55,7 +55,7 @@ function randomGift(itemid)
 
 	local subSum = 0
 	local exactItem = nil
-	for i,v in ipairs(config[itemid]) do
+	for i, v in ipairs(config[itemid]) do
 		if (subSum > rand) then
 			if (i > 1) then
 				exactItem = i-1
@@ -75,7 +75,7 @@ end
 function onUse(cid, item, fromPosition, itemEx, toPosition)
 	local run = false
 	
-	for k,v in pairs(config) do
+	for k, v in pairs(config) do
 		if (k == item.itemid) then
 			run = true
 			break
@@ -93,8 +93,9 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 	else
 		doPlayerAddItem(cid, config[item.itemid][gift].item, math.random(config[item.itemid][gift].count.min, config[item.itemid][gift].count.max))
 	end
-	
+
 	doSendMagicEffect(fromPosition, CONST_ME_GIFT_WRAPS)
 	doRemoveItem(item.uid, 1)
+
 	return true
 end

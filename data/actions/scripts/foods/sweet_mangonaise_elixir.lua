@@ -23,7 +23,7 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 			return true
 		end
 
-		for i=1,config.amount do
+		for i=1, config.amount do
 			doPlayerAddItemEx(cid, doCopyItem(ring).uid, true)
 		end
 	else
