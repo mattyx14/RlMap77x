@@ -2,4 +2,7 @@ Changes Datapack:
 	Added switch tiles on Rook
 	Fixed all switch tiles from depots on mainLand
 	Fixed typos error on monsters
+	Fixed dragon corpse on Rook
+	Fixed duplicate UID
+	More organized XML Files
 	Set main town to Thais
