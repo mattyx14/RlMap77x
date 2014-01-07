@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mod name="First Items" version="1.0" author="Kaiser" contact="marranas6@gmail.com" enabled="yes">
+	<description><![CDATA[
+		Custom First Items
+	]]></description>
+
+	<config name="firstitems_config"><![CDATA[
+		config = {
+			storage = 40046,
+			items = {}
+		}
+	]]></config>
+
+	<event type="login" name="FirstItems" event="buffer"><![CDATA[
+		domodlib('firstitems_config')
+		if(getPlayerStorageValue(cid, config.storage) > 0) then
+			return
+		end
+
+		for _, id in ipairs(config.items) do
+			doPlayerAddItem(cid, id, 1)
+		end
+
+		-- All Vocation
+
+			-- Jacket
+			doPlayerAddItem(cid, 2650, 1)
+
+			-- Club
+			doPlayerAddItem(cid, 2382, 1)
+			-- Bag
+			doPlayerAddItem(cid, 1987, 1)
+			-- Apple
+			doPlayerAddItem(cid, 2674, 1)
+
+
+	setPlayerStorageValue(cid, config.storage, 1)
+	]]></event>
+</mod>

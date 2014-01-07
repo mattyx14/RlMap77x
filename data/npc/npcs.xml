@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npcs>
+	<npc name="Britany" file="Britany.xml"/>
+	<npc name="Josue" file="Josue.xml"/>
+	<npc name="Milton" file="Milton.xml"/>
+	<npc name="Xodet" file="Xodet.xml"/>
+	<npc name="Nimral" file="Nimral.xml"/>
+	<npc name="Benjamin" file="Benjamin.xml"/>
+	<npc name="Ruby" file="Ruby.xml"/>
+	<npc name="King Tibianus" file="King Tibianus.xml"/>
+	<npc name="Soya" file="Soya.xml"/>
+</npcs>
