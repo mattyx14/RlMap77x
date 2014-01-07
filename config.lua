@@ -32,12 +32,12 @@
 
 	accountManager = true
 	namelockManager = true
-	newPlayerChooseVoc = false
-	newPlayerSpawnPosX = 160
-	newPlayerSpawnPosY = 54
+	newPlayerChooseVoc = true
+	newPlayerSpawnPosX = 32369
+	newPlayerSpawnPosY = 32241
 	newPlayerSpawnPosZ = 7
-	newPlayerTownId = 11
-	newPlayerLevel = 1
+	newPlayerTownId = 3
+	newPlayerLevel = 8
 	newPlayerMagicLevel = 0
 	generateAccountNumber = false
 	generateAccountSalt = true

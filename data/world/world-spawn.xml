@@ -487,7 +487,7 @@
     <monster name="blue djinn" x="2" y="3" z="4" spawntime="60"/>
   </spawn>
   <spawn centerx="32840" centery="32525" centerz="4" radius="5">
-    <monster name="merlkin" x="0" y="0" z="4" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="4" spawntime="60"/>
     <monster name="kongra" x="3" y="2" z="4" spawntime="60"/>
   </spawn>
   <spawn centerx="33108" centery="32525" centerz="4" radius="5">
@@ -878,82 +878,82 @@
     <monster name="swamp troll" x="0" y="4" z="5" spawntime="60"/>
   </spawn>
   <spawn centerx="32234" centery="32217" centerz="5" radius="25">
-    <monster name="training monk" x="-10" y="-22" z="5" spawntime="60"/>
-    <monster name="training monk" x="9" y="-22" z="5" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-20" z="5" spawntime="60"/>
-    <monster name="training monk" x="9" y="-20" z="5" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-18" z="5" spawntime="60"/>
-    <monster name="training monk" x="-1" y="-18" z="5" spawntime="60"/>
-    <monster name="training monk" x="1" y="-18" z="5" spawntime="60"/>
-    <monster name="training monk" x="9" y="-18" z="5" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-16" z="5" spawntime="60"/>
-    <monster name="training monk" x="-1" y="-16" z="5" spawntime="60"/>
-    <monster name="training monk" x="1" y="-16" z="5" spawntime="60"/>
-    <monster name="training monk" x="9" y="-16" z="5" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-14" z="5" spawntime="60"/>
-    <monster name="training monk" x="9" y="-14" z="5" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-12" z="5" spawntime="60"/>
-    <monster name="training monk" x="9" y="-12" z="5" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-10" z="5" spawntime="60"/>
-    <monster name="training monk" x="-1" y="-10" z="5" spawntime="60"/>
-    <monster name="training monk" x="1" y="-10" z="5" spawntime="60"/>
-    <monster name="training monk" x="9" y="-10" z="5" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-8" z="5" spawntime="60"/>
-    <monster name="training monk" x="-1" y="-8" z="5" spawntime="60"/>
-    <monster name="training monk" x="1" y="-8" z="5" spawntime="60"/>
-    <monster name="training monk" x="9" y="-8" z="5" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-6" z="5" spawntime="60"/>
-    <monster name="training monk" x="-1" y="-6" z="5" spawntime="60"/>
-    <monster name="training monk" x="1" y="-6" z="5" spawntime="60"/>
-    <monster name="training monk" x="9" y="-6" z="5" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-4" z="5" spawntime="60"/>
-    <monster name="training monk" x="-1" y="-4" z="5" spawntime="32000"/>
-    <monster name="training monk" x="1" y="-4" z="5" spawntime="60"/>
-    <monster name="training monk" x="9" y="-4" z="5" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-2" z="5" spawntime="60"/>
-    <monster name="training monk" x="-1" y="-2" z="5" spawntime="60"/>
-    <monster name="training monk" x="1" y="-2" z="5" spawntime="60"/>
-    <monster name="training monk" x="9" y="-2" z="5" spawntime="60"/>
-    <monster name="training monk" x="-10" y="0" z="5" spawntime="60"/>
-    <monster name="training monk" x="-1" y="0" z="5" spawntime="60"/>
-    <monster name="training monk" x="1" y="0" z="5" spawntime="60"/>
-    <monster name="training monk" x="9" y="0" z="5" spawntime="60"/>
-    <monster name="training monk" x="-10" y="2" z="5" spawntime="60"/>
-    <monster name="training monk" x="-1" y="2" z="5" spawntime="60"/>
-    <monster name="training monk" x="1" y="2" z="5" spawntime="60"/>
-    <monster name="training monk" x="9" y="2" z="5" spawntime="60"/>
-    <monster name="training monk" x="-10" y="4" z="5" spawntime="60"/>
-    <monster name="training monk" x="-1" y="4" z="5" spawntime="60"/>
-    <monster name="training monk" x="1" y="4" z="5" spawntime="60"/>
-    <monster name="training monk" x="9" y="4" z="5" spawntime="60"/>
-    <monster name="training monk" x="-10" y="6" z="5" spawntime="60"/>
-    <monster name="training monk" x="-1" y="6" z="5" spawntime="60"/>
-    <monster name="training monk" x="1" y="6" z="5" spawntime="60"/>
-    <monster name="training monk" x="9" y="6" z="5" spawntime="60"/>
-    <monster name="training monk" x="-10" y="8" z="5" spawntime="60"/>
-    <monster name="training monk" x="-1" y="8" z="5" spawntime="60"/>
-    <monster name="training monk" x="1" y="8" z="5" spawntime="60"/>
-    <monster name="training monk" x="9" y="8" z="5" spawntime="60"/>
-    <monster name="training monk" x="-10" y="10" z="5" spawntime="60"/>
-    <monster name="training monk" x="-1" y="10" z="5" spawntime="60"/>
-    <monster name="training monk" x="1" y="10" z="5" spawntime="60"/>
-    <monster name="training monk" x="9" y="10" z="5" spawntime="60"/>
-    <monster name="training monk" x="-10" y="12" z="5" spawntime="60"/>
-    <monster name="training monk" x="-1" y="12" z="5" spawntime="60"/>
-    <monster name="training monk" x="1" y="12" z="5" spawntime="60"/>
-    <monster name="training monk" x="9" y="12" z="5" spawntime="60"/>
-    <monster name="training monk" x="-10" y="14" z="5" spawntime="60"/>
-    <monster name="training monk" x="-1" y="14" z="5" spawntime="60"/>
-    <monster name="training monk" x="1" y="14" z="5" spawntime="60"/>
-    <monster name="training monk" x="9" y="14" z="5" spawntime="60"/>
-    <monster name="training monk" x="-10" y="16" z="5" spawntime="60"/>
-    <monster name="training monk" x="-1" y="16" z="5" spawntime="60"/>
-    <monster name="training monk" x="1" y="16" z="5" spawntime="60"/>
-    <monster name="training monk" x="9" y="16" z="5" spawntime="60"/>
-    <monster name="training monk" x="-10" y="18" z="5" spawntime="60"/>
-    <monster name="training monk" x="9" y="18" z="5" spawntime="60"/>
-    <monster name="training monk" x="-10" y="20" z="5" spawntime="60"/>
-    <monster name="training monk" x="9" y="20" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-22" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-22" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-20" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-20" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-18" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="-18" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="-18" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-18" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-16" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="-16" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="-16" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-16" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-14" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-14" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-12" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-12" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-10" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="-10" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="-10" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-10" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-8" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="-8" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="-8" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-8" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-6" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="-6" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="-6" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-6" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-4" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="-4" z="5" spawntime="32000"/>
+    <monster name="Training Monk" x="1" y="-4" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-4" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-2" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="-2" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="-2" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-2" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="0" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="0" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="0" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="0" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="2" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="2" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="2" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="2" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="4" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="4" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="4" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="4" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="6" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="6" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="6" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="6" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="8" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="8" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="8" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="8" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="10" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="10" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="10" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="10" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="12" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="12" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="12" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="12" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="14" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="14" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="14" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="14" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="16" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="16" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="16" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="16" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="18" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="18" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="20" z="5" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="20" z="5" spawntime="60"/>
   </spawn>
   <spawn centerx="33308" centery="32285" centerz="5" radius="5">
     <monster name="minotaur" x="-5" y="0" z="5" spawntime="60"/>
@@ -1043,7 +1043,7 @@
   <spawn centerx="33101" centery="32520" centerz="5" radius="1"/>
   <spawn centerx="32842" centery="32525" centerz="5" radius="5">
     <monster name="sibang" x="0" y="0" z="5" spawntime="60"/>
-    <monster name="merlkin" x="-1" y="2" z="5" spawntime="60"/>
+    <monster name="Merlkin" x="-1" y="2" z="5" spawntime="60"/>
   </spawn>
   <spawn centerx="33094" centery="32530" centerz="5" radius="5">
     <monster name="blue djinn" x="0" y="0" z="5" spawntime="60"/>
@@ -1054,7 +1054,7 @@
     <monster name="stone golem" x="0" y="0" z="5" spawntime="60"/>
   </spawn>
   <spawn centerx="32811" centery="32547" centerz="5" radius="5">
-    <monster name="merlkin" x="0" y="0" z="5" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="5" spawntime="60"/>
     <monster name="kongra" x="2" y="2" z="5" spawntime="60"/>
   </spawn>
   <spawn centerx="32837" centery="32547" centerz="5" radius="5">
@@ -1068,14 +1068,14 @@
   </spawn>
   <spawn centerx="32846" centery="32563" centerz="5" radius="5">
     <monster name="sibang" x="0" y="0" z="5" spawntime="60"/>
-    <monster name="merlkin" x="3" y="0" z="5" spawntime="60"/>
+    <monster name="Merlkin" x="3" y="0" z="5" spawntime="60"/>
     <monster name="kongra" x="2" y="3" z="5" spawntime="60"/>
   </spawn>
   <spawn centerx="33127" centery="32564" centerz="5" radius="5">
     <monster name="stone golem" x="0" y="0" z="5" spawntime="60"/>
   </spawn>
   <spawn centerx="32773" centery="32565" centerz="5" radius="5">
-    <monster name="merlkin" x="0" y="0" z="5" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="5" spawntime="60"/>
   </spawn>
   <spawn centerx="32827" centery="32575" centerz="5" radius="5">
     <monster name="kongra" x="0" y="0" z="5" spawntime="60"/>
@@ -1920,82 +1920,82 @@
     <monster name="troll" x="0" y="0" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="32233" centery="32216" centerz="6" radius="25">
-    <monster name="training monk" x="-10" y="-22" z="6" spawntime="60"/>
-    <monster name="training monk" x="9" y="-22" z="6" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-20" z="6" spawntime="60"/>
-    <monster name="training monk" x="9" y="-20" z="6" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-18" z="6" spawntime="60"/>
-    <monster name="training monk" x="-1" y="-18" z="6" spawntime="60"/>
-    <monster name="training monk" x="1" y="-18" z="6" spawntime="60"/>
-    <monster name="training monk" x="9" y="-18" z="6" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-16" z="6" spawntime="60"/>
-    <monster name="training monk" x="-1" y="-16" z="6" spawntime="60"/>
-    <monster name="training monk" x="1" y="-16" z="6" spawntime="60"/>
-    <monster name="training monk" x="9" y="-16" z="6" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-14" z="6" spawntime="60"/>
-    <monster name="training monk" x="9" y="-14" z="6" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-12" z="6" spawntime="60"/>
-    <monster name="training monk" x="9" y="-12" z="6" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-10" z="6" spawntime="60"/>
-    <monster name="training monk" x="-1" y="-10" z="6" spawntime="60"/>
-    <monster name="training monk" x="1" y="-10" z="6" spawntime="60"/>
-    <monster name="training monk" x="9" y="-10" z="6" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-8" z="6" spawntime="60"/>
-    <monster name="training monk" x="-1" y="-8" z="6" spawntime="60"/>
-    <monster name="training monk" x="1" y="-8" z="6" spawntime="60"/>
-    <monster name="training monk" x="9" y="-8" z="6" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-6" z="6" spawntime="60"/>
-    <monster name="training monk" x="-1" y="-6" z="6" spawntime="60"/>
-    <monster name="training monk" x="1" y="-6" z="6" spawntime="60"/>
-    <monster name="training monk" x="9" y="-6" z="6" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-4" z="6" spawntime="60"/>
-    <monster name="training monk" x="-1" y="-4" z="6" spawntime="32000"/>
-    <monster name="training monk" x="1" y="-4" z="6" spawntime="60"/>
-    <monster name="training monk" x="9" y="-4" z="6" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-2" z="6" spawntime="60"/>
-    <monster name="training monk" x="-1" y="-2" z="6" spawntime="60"/>
-    <monster name="training monk" x="1" y="-2" z="6" spawntime="60"/>
-    <monster name="training monk" x="9" y="-2" z="6" spawntime="60"/>
-    <monster name="training monk" x="-10" y="0" z="6" spawntime="60"/>
-    <monster name="training monk" x="-1" y="0" z="6" spawntime="60"/>
-    <monster name="training monk" x="1" y="0" z="6" spawntime="60"/>
-    <monster name="training monk" x="9" y="0" z="6" spawntime="60"/>
-    <monster name="training monk" x="-10" y="2" z="6" spawntime="60"/>
-    <monster name="training monk" x="-1" y="2" z="6" spawntime="60"/>
-    <monster name="training monk" x="1" y="2" z="6" spawntime="60"/>
-    <monster name="training monk" x="9" y="2" z="6" spawntime="60"/>
-    <monster name="training monk" x="-10" y="4" z="6" spawntime="60"/>
-    <monster name="training monk" x="-1" y="4" z="6" spawntime="60"/>
-    <monster name="training monk" x="1" y="4" z="6" spawntime="60"/>
-    <monster name="training monk" x="9" y="4" z="6" spawntime="60"/>
-    <monster name="training monk" x="-10" y="6" z="6" spawntime="60"/>
-    <monster name="training monk" x="-1" y="6" z="6" spawntime="60"/>
-    <monster name="training monk" x="1" y="6" z="6" spawntime="60"/>
-    <monster name="training monk" x="9" y="6" z="6" spawntime="60"/>
-    <monster name="training monk" x="-10" y="8" z="6" spawntime="60"/>
-    <monster name="training monk" x="-1" y="8" z="6" spawntime="60"/>
-    <monster name="training monk" x="1" y="8" z="6" spawntime="60"/>
-    <monster name="training monk" x="9" y="8" z="6" spawntime="60"/>
-    <monster name="training monk" x="-10" y="10" z="6" spawntime="60"/>
-    <monster name="training monk" x="-1" y="10" z="6" spawntime="60"/>
-    <monster name="training monk" x="1" y="10" z="6" spawntime="60"/>
-    <monster name="training monk" x="9" y="10" z="6" spawntime="60"/>
-    <monster name="training monk" x="-10" y="12" z="6" spawntime="60"/>
-    <monster name="training monk" x="-1" y="12" z="6" spawntime="60"/>
-    <monster name="training monk" x="1" y="12" z="6" spawntime="60"/>
-    <monster name="training monk" x="9" y="12" z="6" spawntime="60"/>
-    <monster name="training monk" x="-10" y="14" z="6" spawntime="60"/>
-    <monster name="training monk" x="-1" y="14" z="6" spawntime="60"/>
-    <monster name="training monk" x="1" y="14" z="6" spawntime="60"/>
-    <monster name="training monk" x="9" y="14" z="6" spawntime="60"/>
-    <monster name="training monk" x="-10" y="16" z="6" spawntime="60"/>
-    <monster name="training monk" x="-1" y="16" z="6" spawntime="60"/>
-    <monster name="training monk" x="1" y="16" z="6" spawntime="60"/>
-    <monster name="training monk" x="9" y="16" z="6" spawntime="60"/>
-    <monster name="training monk" x="-10" y="18" z="6" spawntime="60"/>
-    <monster name="training monk" x="9" y="18" z="6" spawntime="60"/>
-    <monster name="training monk" x="-10" y="20" z="6" spawntime="60"/>
-    <monster name="training monk" x="9" y="20" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-22" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-22" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-20" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-20" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-18" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="-18" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="-18" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-18" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-16" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="-16" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="-16" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-16" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-14" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-14" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-12" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-12" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-10" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="-10" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="-10" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-10" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-8" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="-8" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="-8" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-8" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-6" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="-6" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="-6" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-6" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-4" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="-4" z="6" spawntime="32000"/>
+    <monster name="Training Monk" x="1" y="-4" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-4" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-2" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="-2" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="-2" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-2" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="0" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="0" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="0" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="0" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="2" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="2" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="2" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="2" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="4" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="4" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="4" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="4" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="6" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="6" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="6" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="6" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="8" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="8" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="8" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="8" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="10" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="10" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="10" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="10" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="12" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="12" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="12" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="12" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="14" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="14" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="14" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="14" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="16" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="16" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="16" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="16" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="18" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="18" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="20" z="6" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="20" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="32938" centery="32216" centerz="6" radius="5">
     <monster name="swamp troll" x="4" y="-1" z="6" spawntime="60"/>
@@ -2174,7 +2174,7 @@
   </spawn>
   <spawn centerx="32776" centery="32514" centerz="6" radius="5">
     <monster name="sibang" x="0" y="0" z="6" spawntime="60"/>
-    <monster name="merlkin" x="4" y="1" z="6" spawntime="60"/>
+    <monster name="Merlkin" x="4" y="1" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="32780" centery="32515" centerz="6" radius="5">
     <monster name="kongra" x="4" y="0" z="6" spawntime="60"/>
@@ -2189,16 +2189,16 @@
     <monster name="kongra" x="5" y="5" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="32802" centery="32523" centerz="6" radius="5">
-    <monster name="merlkin" x="0" y="0" z="6" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="32839" centery="32523" centerz="6" radius="5">
-    <monster name="merlkin" x="4" y="0" z="6" spawntime="60"/>
+    <monster name="Merlkin" x="4" y="0" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="32843" centery="32523" centerz="6" radius="5">
-    <monster name="merlkin" x="4" y="4" z="6" spawntime="60"/>
+    <monster name="Merlkin" x="4" y="4" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="32785" centery="32524" centerz="6" radius="5">
-    <monster name="merlkin" x="0" y="0" z="6" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="33096" centery="32528" centerz="6" radius="2">
     <monster name="blue djinn" x="-1" y="0" z="6" spawntime="60"/>
@@ -2212,17 +2212,17 @@
   </spawn>
   <spawn centerx="33101" centery="32533" centerz="6" radius="1"/>
   <spawn centerx="32769" centery="32535" centerz="6" radius="5">
-    <monster name="merlkin" x="0" y="0" z="6" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="6" spawntime="60"/>
     <monster name="kongra" x="3" y="1" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="33175" centery="32541" centerz="6" radius="5">
     <monster name="hyaena" x="0" y="0" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="32818" centery="32543" centerz="6" radius="5">
-    <monster name="merlkin" x="0" y="0" z="6" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="32860" centery="32543" centerz="6" radius="5">
-    <monster name="merlkin" x="0" y="0" z="6" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="32837" centery="32544" centerz="6" radius="5">
     <monster name="sibang" x="0" y="0" z="6" spawntime="60"/>
@@ -2230,7 +2230,7 @@
   </spawn>
   <spawn centerx="32807" centery="32545" centerz="6" radius="5">
     <monster name="kongra" x="0" y="0" z="6" spawntime="60"/>
-    <monster name="merlkin" x="5" y="0" z="6" spawntime="60"/>
+    <monster name="Merlkin" x="5" y="0" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="32812" centery="32545" centerz="6" radius="5">
     <monster name="sibang" x="1" y="4" z="6" spawntime="60"/>
@@ -2256,14 +2256,14 @@
   <spawn centerx="32773" centery="32561" centerz="6" radius="5">
     <monster name="sibang" x="0" y="0" z="6" spawntime="60"/>
     <monster name="kongra" x="4" y="1" z="6" spawntime="60"/>
-    <monster name="merlkin" x="-3" y="2" z="6" spawntime="60"/>
+    <monster name="Merlkin" x="-3" y="2" z="6" spawntime="60"/>
     <monster name="sibang" x="-5" y="4" z="6" spawntime="60"/>
     <monster name="kongra" x="0" y="4" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="32843" centery="32561" centerz="6" radius="5">
     <monster name="kongra" x="0" y="0" z="6" spawntime="60"/>
     <monster name="sibang" x="5" y="3" z="6" spawntime="60"/>
-    <monster name="merlkin" x="3" y="5" z="6" spawntime="60"/>
+    <monster name="Merlkin" x="3" y="5" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="33093" centery="32562" centerz="6" radius="5">
     <monster name="larva" x="0" y="0" z="6" spawntime="60"/>
@@ -2286,7 +2286,7 @@
   </spawn>
   <spawn centerx="32809" centery="32580" centerz="6" radius="5">
     <monster name="kongra" x="0" y="0" z="6" spawntime="60"/>
-    <monster name="merlkin" x="0" y="3" z="6" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="3" z="6" spawntime="60"/>
     <monster name="kongra" x="4" y="3" z="6" spawntime="60"/>
     <monster name="sibang" x="-4" y="4" z="6" spawntime="60"/>
   </spawn>
@@ -2299,7 +2299,7 @@
     <monster name="kongra" x="3" y="5" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="32849" centery="32582" centerz="6" radius="5">
-    <monster name="merlkin" x="0" y="0" z="6" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="6" spawntime="60"/>
     <monster name="sibang" x="2" y="0" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="32809" centery="32583" centerz="6" radius="5">
@@ -5177,82 +5177,82 @@
     <monster name="wolf" x="0" y="0" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="32232" centery="32215" centerz="7" radius="25">
-    <monster name="training monk" x="-10" y="-22" z="7" spawntime="60"/>
-    <monster name="training monk" x="9" y="-22" z="7" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-20" z="7" spawntime="60"/>
-    <monster name="training monk" x="9" y="-20" z="7" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-18" z="7" spawntime="60"/>
-    <monster name="training monk" x="-1" y="-18" z="7" spawntime="60"/>
-    <monster name="training monk" x="1" y="-18" z="7" spawntime="60"/>
-    <monster name="training monk" x="9" y="-18" z="7" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-16" z="7" spawntime="60"/>
-    <monster name="training monk" x="-1" y="-16" z="7" spawntime="60"/>
-    <monster name="training monk" x="1" y="-16" z="7" spawntime="60"/>
-    <monster name="training monk" x="9" y="-16" z="7" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-14" z="7" spawntime="60"/>
-    <monster name="training monk" x="9" y="-14" z="7" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-12" z="7" spawntime="60"/>
-    <monster name="training monk" x="9" y="-12" z="7" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-10" z="7" spawntime="60"/>
-    <monster name="training monk" x="-1" y="-10" z="7" spawntime="60"/>
-    <monster name="training monk" x="1" y="-10" z="7" spawntime="60"/>
-    <monster name="training monk" x="9" y="-10" z="7" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-8" z="7" spawntime="60"/>
-    <monster name="training monk" x="-1" y="-8" z="7" spawntime="60"/>
-    <monster name="training monk" x="1" y="-8" z="7" spawntime="60"/>
-    <monster name="training monk" x="9" y="-8" z="7" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-6" z="7" spawntime="60"/>
-    <monster name="training monk" x="-1" y="-6" z="7" spawntime="60"/>
-    <monster name="training monk" x="1" y="-6" z="7" spawntime="60"/>
-    <monster name="training monk" x="9" y="-6" z="7" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-4" z="7" spawntime="60"/>
-    <monster name="training monk" x="-1" y="-4" z="7" spawntime="32000"/>
-    <monster name="training monk" x="1" y="-4" z="7" spawntime="60"/>
-    <monster name="training monk" x="9" y="-4" z="7" spawntime="60"/>
-    <monster name="training monk" x="-10" y="-2" z="7" spawntime="60"/>
-    <monster name="training monk" x="-1" y="-2" z="7" spawntime="60"/>
-    <monster name="training monk" x="1" y="-2" z="7" spawntime="60"/>
-    <monster name="training monk" x="9" y="-2" z="7" spawntime="60"/>
-    <monster name="training monk" x="-10" y="0" z="7" spawntime="60"/>
-    <monster name="training monk" x="-1" y="0" z="7" spawntime="60"/>
-    <monster name="training monk" x="1" y="0" z="7" spawntime="60"/>
-    <monster name="training monk" x="9" y="0" z="7" spawntime="60"/>
-    <monster name="training monk" x="-10" y="2" z="7" spawntime="60"/>
-    <monster name="training monk" x="-1" y="2" z="7" spawntime="60"/>
-    <monster name="training monk" x="1" y="2" z="7" spawntime="60"/>
-    <monster name="training monk" x="9" y="2" z="7" spawntime="60"/>
-    <monster name="training monk" x="-10" y="4" z="7" spawntime="60"/>
-    <monster name="training monk" x="-1" y="4" z="7" spawntime="60"/>
-    <monster name="training monk" x="1" y="4" z="7" spawntime="60"/>
-    <monster name="training monk" x="9" y="4" z="7" spawntime="60"/>
-    <monster name="training monk" x="-10" y="6" z="7" spawntime="60"/>
-    <monster name="training monk" x="-1" y="6" z="7" spawntime="60"/>
-    <monster name="training monk" x="1" y="6" z="7" spawntime="60"/>
-    <monster name="training monk" x="9" y="6" z="7" spawntime="60"/>
-    <monster name="training monk" x="-10" y="8" z="7" spawntime="60"/>
-    <monster name="training monk" x="-1" y="8" z="7" spawntime="60"/>
-    <monster name="training monk" x="1" y="8" z="7" spawntime="60"/>
-    <monster name="training monk" x="9" y="8" z="7" spawntime="60"/>
-    <monster name="training monk" x="-10" y="10" z="7" spawntime="60"/>
-    <monster name="training monk" x="-1" y="10" z="7" spawntime="60"/>
-    <monster name="training monk" x="1" y="10" z="7" spawntime="60"/>
-    <monster name="training monk" x="9" y="10" z="7" spawntime="60"/>
-    <monster name="training monk" x="-10" y="12" z="7" spawntime="60"/>
-    <monster name="training monk" x="-1" y="12" z="7" spawntime="60"/>
-    <monster name="training monk" x="1" y="12" z="7" spawntime="60"/>
-    <monster name="training monk" x="9" y="12" z="7" spawntime="60"/>
-    <monster name="training monk" x="-10" y="14" z="7" spawntime="60"/>
-    <monster name="training monk" x="-1" y="14" z="7" spawntime="60"/>
-    <monster name="training monk" x="1" y="14" z="7" spawntime="60"/>
-    <monster name="training monk" x="9" y="14" z="7" spawntime="60"/>
-    <monster name="training monk" x="-10" y="16" z="7" spawntime="60"/>
-    <monster name="training monk" x="-1" y="16" z="7" spawntime="60"/>
-    <monster name="training monk" x="1" y="16" z="7" spawntime="60"/>
-    <monster name="training monk" x="9" y="16" z="7" spawntime="60"/>
-    <monster name="training monk" x="-10" y="18" z="7" spawntime="60"/>
-    <monster name="training monk" x="9" y="18" z="7" spawntime="60"/>
-    <monster name="training monk" x="-10" y="20" z="7" spawntime="60"/>
-    <monster name="training monk" x="9" y="20" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-22" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-22" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-20" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-20" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-18" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="-18" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="-18" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-18" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-16" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="-16" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="-16" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-16" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-14" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-14" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-12" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-12" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-10" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="-10" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="-10" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-10" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-8" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="-8" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="-8" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-8" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-6" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="-6" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="-6" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-6" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-4" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="-4" z="7" spawntime="32000"/>
+    <monster name="Training Monk" x="1" y="-4" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-4" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="-2" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="-2" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="-2" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="-2" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="0" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="0" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="0" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="0" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="2" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="2" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="2" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="2" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="4" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="4" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="4" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="4" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="6" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="6" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="6" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="6" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="8" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="8" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="8" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="8" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="10" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="10" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="10" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="10" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="12" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="12" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="12" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="12" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="14" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="14" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="14" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="14" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="16" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-1" y="16" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="1" y="16" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="16" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="18" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="18" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="-10" y="20" z="7" spawntime="60"/>
+    <monster name="Training Monk" x="9" y="20" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="32368" centery="32215" centerz="7" radius="5">
     <monster name="dog" x="0" y="-1" z="7" spawntime="400"/>
@@ -6312,7 +6312,7 @@
     <monster name="spit nettle" x="0" y="0" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="32819" centery="32519" centerz="7" radius="5">
-    <monster name="merlkin" x="0" y="0" z="7" spawntime="890"/>
+    <monster name="Merlkin" x="0" y="0" z="7" spawntime="890"/>
     <monster name="sibang" x="1" y="2" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="32885" centery="32519" centerz="7" radius="5">
@@ -6404,7 +6404,7 @@
     <monster name="sibang" x="0" y="0" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="32812" centery="32535" centerz="7" radius="5">
-    <monster name="merlkin" x="0" y="0" z="7" spawntime="750"/>
+    <monster name="Merlkin" x="0" y="0" z="7" spawntime="750"/>
     <monster name="Blue Butterfly" x="4" y="3" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="32869" centery="32535" centerz="7" radius="5">
@@ -6509,7 +6509,7 @@
     <monster name="Blue Butterfly" x="0" y="0" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="32835" centery="32554" centerz="7" radius="5">
-    <monster name="merlkin" x="0" y="0" z="7" spawntime="750"/>
+    <monster name="Merlkin" x="0" y="0" z="7" spawntime="750"/>
   </spawn>
   <spawn centerx="32750" centery="32555" centerz="7" radius="5">
     <monster name="sibang" x="0" y="0" z="7" spawntime="60"/>
@@ -6546,7 +6546,7 @@
   </spawn>
   <spawn centerx="32805" centery="32561" centerz="7" radius="5">
     <monster name="sibang" x="0" y="0" z="7" spawntime="60"/>
-    <monster name="merlkin" x="-4" y="3" z="7" spawntime="890"/>
+    <monster name="Merlkin" x="-4" y="3" z="7" spawntime="890"/>
   </spawn>
   <spawn centerx="33017" centery="32561" centerz="7" radius="5">
     <monster name="carniphila" x="0" y="0" z="7" spawntime="60"/>
@@ -6556,7 +6556,7 @@
   </spawn>
   <spawn centerx="32847" centery="32562" centerz="7" radius="5">
     <monster name="sibang" x="0" y="0" z="7" spawntime="60"/>
-    <monster name="merlkin" x="0" y="3" z="7" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="3" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="32902" centery="32562" centerz="7" radius="5">
     <monster name="centipede" x="0" y="0" z="7" spawntime="60"/>
@@ -6598,7 +6598,7 @@
   </spawn>
   <spawn centerx="32788" centery="32568" centerz="7" radius="5">
     <monster name="kongra" x="0" y="0" z="7" spawntime="60"/>
-    <monster name="merlkin" x="-1" y="5" z="7" spawntime="750"/>
+    <monster name="Merlkin" x="-1" y="5" z="7" spawntime="750"/>
   </spawn>
   <spawn centerx="33022" centery="32568" centerz="7" radius="5">
     <monster name="stone golem" x="0" y="0" z="7" spawntime="60"/>
@@ -6672,7 +6672,7 @@
     <monster name="swamp troll" x="0" y="0" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="32837" centery="32578" centerz="7" radius="5">
-    <monster name="merlkin" x="0" y="0" z="7" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="7" spawntime="60"/>
     <monster name="kongra" x="1" y="5" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="32928" centery="32578" centerz="7" radius="5">
@@ -6825,7 +6825,7 @@
   </spawn>
   <spawn centerx="32964" centery="32598" centerz="7" radius="5">
     <monster name="sibang" x="0" y="0" z="7" spawntime="60"/>
-    <monster name="merlkin" x="2" y="0" z="7" spawntime="60"/>
+    <monster name="Merlkin" x="2" y="0" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="32612" centery="32599" centerz="7" radius="5">
     <monster name="snake" x="0" y="0" z="7" spawntime="60"/>
@@ -12050,22 +12050,22 @@
     <monster name="skeleton" x="0" y="0" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="32787" centery="32493" centerz="8" radius="5">
-    <monster name="merlkin" x="0" y="0" z="8" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="8" spawntime="60"/>
     <monster name="sibang" x="3" y="3" z="8" spawntime="60"/>
     <monster name="kongra" x="0" y="4" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="32789" centery="32506" centerz="8" radius="5">
-    <monster name="merlkin" x="0" y="0" z="8" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="8" spawntime="60"/>
     <monster name="sibang" x="2" y="0" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="32848" centery="32507" centerz="8" radius="5">
-    <monster name="merlkin" x="0" y="0" z="8" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="8" spawntime="60"/>
     <monster name="kongra" x="0" y="2" z="8" spawntime="60"/>
-    <monster name="merlkin" x="-3" y="3" z="8" spawntime="60"/>
+    <monster name="Merlkin" x="-3" y="3" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="32819" centery="32508" centerz="8" radius="5">
     <monster name="sibang" x="0" y="0" z="8" spawntime="60"/>
-    <monster name="merlkin" x="-2" y="3" z="8" spawntime="750"/>
+    <monster name="Merlkin" x="-2" y="3" z="8" spawntime="750"/>
     <monster name="kongra" x="3" y="4" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="33132" centery="32513" centerz="8" radius="5">
@@ -12074,7 +12074,7 @@
     <monster name="stone golem" x="3" y="3" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="32758" centery="32514" centerz="8" radius="5">
-    <monster name="merlkin" x="0" y="0" z="8" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="8" spawntime="60"/>
     <monster name="kongra" x="-2" y="5" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="32778" centery="32516" centerz="8" radius="5">
@@ -12097,10 +12097,10 @@
     <monster name="kongra" x="0" y="0" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="32822" centery="32523" centerz="8" radius="5">
-    <monster name="merlkin" x="0" y="0" z="8" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="32841" centery="32523" centerz="8" radius="5">
-    <monster name="merlkin" x="0" y="0" z="8" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="33153" centery="32525" centerz="8" radius="5">
     <monster name="blue djinn" x="0" y="0" z="8" spawntime="60"/>
@@ -12141,7 +12141,7 @@
   </spawn>
   <spawn centerx="32814" centery="32544" centerz="8" radius="5">
     <monster name="kongra" x="0" y="0" z="8" spawntime="60"/>
-    <monster name="merlkin" x="5" y="1" z="8" spawntime="60"/>
+    <monster name="Merlkin" x="5" y="1" z="8" spawntime="60"/>
     <monster name="sibang" x="1" y="5" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="32835" centery="32546" centerz="8" radius="5">
@@ -12149,11 +12149,11 @@
   </spawn>
   <spawn centerx="32788" centery="32548" centerz="8" radius="5">
     <monster name="kongra" x="0" y="0" z="8" spawntime="60"/>
-    <monster name="merlkin" x="-4" y="2" z="8" spawntime="60"/>
+    <monster name="Merlkin" x="-4" y="2" z="8" spawntime="60"/>
     <monster name="sibang" x="4" y="2" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="32770" centery="32550" centerz="8" radius="5">
-    <monster name="merlkin" x="0" y="0" z="8" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="8" spawntime="60"/>
     <monster name="kongra" x="3" y="0" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="32784" centery="32550" centerz="8" radius="5">
@@ -12170,7 +12170,7 @@
     <monster name="skeleton" x="-4" y="5" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="32849" centery="32552" centerz="8" radius="5">
-    <monster name="merlkin" x="0" y="0" z="8" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="32760" centery="32556" centerz="8" radius="5">
     <monster name="sibang" x="0" y="0" z="8" spawntime="60"/>
@@ -12179,7 +12179,7 @@
     <monster name="sibang" x="0" y="0" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="32818" centery="32562" centerz="8" radius="5">
-    <monster name="merlkin" x="0" y="0" z="8" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="33172" centery="32563" centerz="8" radius="5">
     <monster name="larva" x="0" y="0" z="8" spawntime="60"/>
@@ -12193,7 +12193,7 @@
   </spawn>
   <spawn centerx="32758" centery="32566" centerz="8" radius="5">
     <monster name="sibang" x="0" y="0" z="8" spawntime="60"/>
-    <monster name="merlkin" x="-5" y="2" z="8" spawntime="60"/>
+    <monster name="Merlkin" x="-5" y="2" z="8" spawntime="60"/>
     <monster name="kongra" x="-1" y="5" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="33151" centery="32566" centerz="8" radius="5">
@@ -12206,21 +12206,21 @@
     <monster name="skeleton" x="3" y="0" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="32827" centery="32567" centerz="8" radius="5">
-    <monster name="merlkin" x="0" y="0" z="8" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="32852" centery="32568" centerz="8" radius="5">
-    <monster name="merlkin" x="0" y="0" z="8" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="8" spawntime="60"/>
     <monster name="kongra" x="-5" y="4" z="8" spawntime="60"/>
     <monster name="sibang" x="1" y="4" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="32790" centery="32569" centerz="8" radius="5">
     <monster name="sibang" x="0" y="0" z="8" spawntime="60"/>
     <monster name="kongra" x="-3" y="2" z="8" spawntime="60"/>
-    <monster name="merlkin" x="0" y="3" z="8" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="3" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="32846" centery="32569" centerz="8" radius="5">
     <monster name="sibang" x="0" y="0" z="8" spawntime="60"/>
-    <monster name="merlkin" x="-5" y="1" z="8" spawntime="60"/>
+    <monster name="Merlkin" x="-5" y="1" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="32774" centery="32571" centerz="8" radius="5">
     <monster name="sibang" x="0" y="0" z="8" spawntime="60"/>
@@ -13398,7 +13398,7 @@
     <monster name="centipede" x="0" y="0" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="32769" centery="3260" centerz="9" radius="5">
-    <monster name="merlkin" x="0" y="0" z="9" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="33043" centery="3260" centerz="9" radius="5">
     <monster name="larva" x="0" y="0" z="9" spawntime="60"/>
@@ -16665,7 +16665,7 @@
     <monster name="sibang" x="0" y="0" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="32809" centery="32496" centerz="9" radius="5">
-    <monster name="merlkin" x="0" y="0" z="9" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="33144" centery="32496" centerz="9" radius="5">
     <monster name="fire elemental" x="0" y="0" z="9" spawntime="60"/>
@@ -16681,7 +16681,7 @@
     <monster name="scarab" x="0" y="0" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="32854" centery="32503" centerz="9" radius="5">
-    <monster name="merlkin" x="-2" y="4" z="9" spawntime="60"/>
+    <monster name="Merlkin" x="-2" y="4" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="33098" centery="32509" centerz="9" radius="5">
     <monster name="marid" x="0" y="0" z="9" spawntime="60"/>
@@ -16725,11 +16725,11 @@
     <monster name="marid" x="0" y="0" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="32811" centery="32520" centerz="9" radius="5">
-    <monster name="merlkin" x="0" y="0" z="9" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="9" spawntime="60"/>
     <monster name="kongra" x="-5" y="3" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="32839" centery="32526" centerz="9" radius="5">
-    <monster name="merlkin" x="0" y="0" z="9" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="32791" centery="32527" centerz="9" radius="5">
     <monster name="sibang" x="0" y="0" z="9" spawntime="60"/>
@@ -16742,7 +16742,7 @@
   </spawn>
   <spawn centerx="32749" centery="32529" centerz="9" radius="5">
     <monster name="kongra" x="0" y="0" z="9" spawntime="60"/>
-    <monster name="merlkin" x="-5" y="5" z="9" spawntime="60"/>
+    <monster name="Merlkin" x="-5" y="5" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="32815" centery="32529" centerz="9" radius="5">
     <monster name="sibang" x="0" y="0" z="9" spawntime="60"/>
@@ -16764,7 +16764,7 @@
     <monster name="kongra" x="0" y="0" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="32807" centery="32535" centerz="9" radius="5">
-    <monster name="merlkin" x="0" y="0" z="9" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="32835" centery="32537" centerz="9" radius="5">
     <monster name="kongra" x="0" y="0" z="9" spawntime="60"/>
@@ -16849,7 +16849,7 @@
     <monster name="scarab" x="0" y="0" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="32745" centery="32564" centerz="9" radius="5">
-    <monster name="merlkin" x="0" y="0" z="9" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="9" spawntime="60"/>
     <monster name="sibang" x="5" y="5" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="32754" centery="32564" centerz="9" radius="5">
@@ -16862,7 +16862,7 @@
     <monster name="scarab" x="0" y="0" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="32784" centery="32565" centerz="9" radius="5">
-    <monster name="merlkin" x="0" y="0" z="9" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="33208" centery="32565" centerz="9" radius="5">
     <monster name="scarab" x="0" y="0" z="9" spawntime="60"/>
@@ -16893,7 +16893,7 @@
     <monster name="larva" x="-2" y="5" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="32759" centery="32571" centerz="9" radius="5">
-    <monster name="merlkin" x="0" y="0" z="9" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="9" spawntime="60"/>
     <monster name="kongra" x="3" y="5" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="32766" centery="32571" centerz="9" radius="5">
@@ -16921,7 +16921,7 @@
     <monster name="larva" x="0" y="0" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="32853" centery="32575" centerz="9" radius="5">
-    <monster name="merlkin" x="0" y="0" z="9" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="32746" centery="32576" centerz="9" radius="5">
     <monster name="kongra" x="0" y="0" z="9" spawntime="60"/>
@@ -16973,7 +16973,7 @@
     <monster name="larva" x="0" y="0" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="32806" centery="32586" centerz="9" radius="5">
-    <monster name="merlkin" x="0" y="0" z="9" spawntime="60"/>
+    <monster name="Merlkin" x="0" y="0" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="33094" centery="32587" centerz="9" radius="5">
     <monster name="larva" x="0" y="0" z="9" spawntime="60"/>
