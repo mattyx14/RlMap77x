@@ -77,7 +77,7 @@
 	<action uniqueid="3006" script="rook/captain iglues treasure/captain iglues treasure letter.lua" />
 	<action uniqueid="3007" script="rook/combat knife quest.lua" />
 	<action uniqueid="3008" script="rook/doublet quest.lua" />
-	<action uniqueid="3009" script="rook/sewer grate switch.lua" />
+	<action uniqueid="3009;3010" script="rook/sewer grate switch.lua" />
 	<action uniqueid="3014" script="rook/goblin temple quest/goblin temple snow.lua" />
 	<action uniqueid="3015" script="rook/goblin temple quest/goblin temple.lua" />
 	<action uniqueid="3016" script="rook/katana quest/viking helmet.lua" />
