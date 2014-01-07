@@ -154,51 +154,28 @@
 	<action actionid="8024" script="Kazordoon/elevator2.lua" />
 
 	<!-- Carlin -->
-	<action uniqueid="9000" script="carlin/griffin shield quest/obsidian.lua" />
-	<action uniqueid="9001" script="carlin/griffin shield quest/griffin.lua" />
-	<action uniqueid="9002" script="carlin/griffin shield quest/dwarven_axe.lua" />
-	<action uniqueid="9003" script="carlin/Crystal Wand Quest/crystal.lua" />
-	<action uniqueid="9004" script="carlin/Crystal Wand Quest/sdrune.lua" />
+	<!-- REQUIRE ADD
+		<action uniqueid="9000" script="carlin/griffin shield quest/obsidian.lua" />
+		<action uniqueid="9001" script="carlin/griffin shield quest/griffin.lua" />
+		<action uniqueid="9002" script="carlin/griffin shield quest/dwarven_axe.lua" />
+	-->
 	<action uniqueid="9005" script="carlin/The Queen of the Banshees Quest/magic_wall_1.lua" />
 	<action uniqueid="9006" script="carlin/The Queen of the Banshees Quest/magic_wall_2.lua" />
 	<action actionid="9007" script="carlin/The Queen of the Banshees Quest/entrance_lever.lua" />
-	<action uniqueid="9019" script="carlin/The Queen of the Banshees Quest/ssa_chest.lua" />
-	<action uniqueid="9020" script="carlin/The Queen of the Banshees Quest/tw_chest.lua" />
-	<action uniqueid="9021" script="carlin/The Queen of the Banshees Quest/gs_chest.lua" />
-	<action uniqueid="9022" script="carlin/The Queen of the Banshees Quest/sr_chest.lua" />
-	<action uniqueid="9023" script="carlin/The Queen of the Banshees Quest/10k_chest.lua" />
-	<action uniqueid="9024" script="carlin/The Queen of the Banshees Quest/boh_chest.lua" />
 	<action uniqueid="9025" script="carlin/brooch.lua" />
 	<action uniqueid="9026" script="carlin/book.lua" />
 
 	<!-- Ab Dendriel -->
-	<action uniqueid="9500" script="Ab'Dendriel/Elvenbane Quest/bag1.lua" />
-	<action uniqueid="9501" script="Ab'Dendriel/Elvenbane Quest/bag2.lua" />
-	<action uniqueid="9502" script="Ab'Dendriel/Elvenbane Quest/dwarven_shield.lua" />
-	<action uniqueid="9503" script="Ab'Dendriel/Elvenbane Quest/morning_star.lua" />
-	<action uniqueid="9504" script="Ab'Dendriel/Orc Fortress Quest/fire_sword.lua" />
-	<action uniqueid="9505" script="Ab'Dendriel/Orc Fortress Quest/knight_armor.lua" />
-	<action uniqueid="9506" script="Ab'Dendriel/Orc Fortress Quest/knight_axe.lua" />
-	<action uniqueid="9507" script="Ab'Dendriel/Draconia Quest/wall switch.lua" />
-	<action uniqueid="9508" script="Ab'Dendriel/Draconia Quest/stone switch.lua" />
-	<action uniqueid="9509" script="Ab'Dendriel/Draconia Quest/bag1.lua" />
-	<action uniqueid="9510" script="Ab'Dendriel/Draconia Quest/bag2.lua" />
+	<action uniqueid="9507" script="AbDendriel/Draconia Quest/wall switch.lua" />
+	<action uniqueid="9508" script="AbDendriel/Draconia Quest/stone switch.lua" />
+
+	<!-- REQUIRE ADD
+	<action uniqueid="10009-10013" script="Ankrahmun/The Ancient Tombs Quest/premio_tumbas.lua" />
 
 	<!-- Edron -->
-	<action uniqueid="10000" script="Edron/Barbarian Axe Quest/reward.lua" />
 	<action uniqueid="10001" script="Edron/Barbarian Axe Quest/switch.lua" />
 	<action uniqueid="10002" script="Edron/Demon Helmet Quest/dh_switch.lua" />
-	<action uniqueid="10003" script="Edron/Demon Helmet Quest/dh_demonhelmet.lua" />
-	<action uniqueid="10004" script="Edron/Demon Helmet Quest/dh_demonshield.lua" />
-	<action uniqueid="10005" script="Edron/Demon Helmet Quest/dh_steelboots.lua" />
-	<action uniqueid="10006" script="Edron/Edron Goblin Quest/steel shield.lua" />
-	<action uniqueid="10007" script="Edron/Edron Goblin Quest/silver amulet.lua" />
-	<action uniqueid="10008" script="Edron/Fire Axe Quest/fire axe.lua" />
-	<action uniqueid="10009" script="Edron/The Annihilator Quest/annihilator_lever.lua" />
-	<action uniqueid="10010" script="Edron/The Annihilator Quest/annihilator_chest.lua" />
-	<action uniqueid="10011" script="Edron/The Annihilator Quest/annihilator_chest.lua" />
-	<action uniqueid="10012" script="Edron/The Annihilator Quest/annihilator_chest.lua" />
-	<action uniqueid="10013" script="Edron/The Annihilator Quest/annihilator_chest.lua" />
+	<action uniqueid="10009-10013" script="Edron/The Annihilator Quest/annihilator_lever.lua" />
 	<action uniqueid="10014" script="Edron/The Behemoth Quest/behemoth_lever.lua" />
 	<action uniqueid="10015" script="Edron/The Behemoth Quest/demon shield.lua" />
 	<action uniqueid="10016" script="Edron/The Behemoth Quest/golden armor.lua" />
@@ -213,7 +190,6 @@
 
 	<!-- Darashia -->
 	<action uniqueid="10100" script="Darashia/Plate Armor Quest/plate_armor.lua" />
-	<action uniqueid="10101" script="Darashia/Medusa Shield Quest/reward.lua" />
 	<action uniqueid="10102" script="Jakundaf Desert/The Desert Dungeons Quest/desert_quest.lua" />
 	<action uniqueid="10103" script="Jakundaf Desert/The Desert Dungeons Quest/100 platinum coins.lua" />
 	<action uniqueid="10104" script="Jakundaf Desert/The Desert Dungeons Quest/green bag.lua" />
