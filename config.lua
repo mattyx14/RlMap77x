@@ -1,11 +1,7 @@
-
-
-
 	ownerName = ""
 	ownerEmail = ""
 	url = ""
 	location = ""
-
 
 	motd = "Welcome to the OTX Server!"
 	serverName = "OTXSERVER"
@@ -25,9 +21,8 @@
 	mysqlReconnectionAttempts = 3
 	encryptionType = "sha1" 
 
-
 	worldId = 0
-	ip = "190.79.15.175"
+	ip = "127.0.0.1"
 	worldType = "open"
 	bindOnlyGlobalAddress = false
 	loginPort = 7171
@@ -47,17 +42,14 @@
 	generateAccountNumber = false
 	generateAccountSalt = true
 
-
 	fragsLimit = 24 * 60 * 60
 	fragsSecondLimit = 7 * 24 * 60 * 60
 	fragsThirdLimit = 30 * 24 * 60 * 60
-
 
 	fragsToRedSkull = 3
 	fragsSecondToRedSkull = 5
 	fragsThirdToRedSkull = 10
 	redSkullLength = 3 * 24 * 60 * 60
-
 
 	fragsToBlackSkull = 6
 	fragsSecondToBlackSkull = 10
@@ -66,7 +58,6 @@
 	blackSkulledDeathMana = 0
 	blackSkullLength = 6 * 24 * 60 * 60
 	useBlackSkull = true
-
 
 	notationsToBan = 3
 	warningsToFinalBan = 4
@@ -78,7 +69,6 @@
 	fragsToBanishment = 7
 	fragsSecondToBanishment = 21
 	fragsThirdToBanishment = 41
-
 
 	protectionLevel = 1
 	pvpTileIgnoreLevelAndVocationProtection = true
@@ -116,14 +106,11 @@
 	rsaModulus = "109120132967399429278860960508995541528237502902798129123468757937266291492576446330739696001110603907230888610072655818825358503429057592827629436413108566029093628212635953836686562675849720620786279431090218017681061521755056710823876476444260558147179707119674283982419152118103759076030616683978566631413"
 	rsaPrivate = "46730330223584118622160180015036832148732986808519344675210555262940258739805766860224610646919605860206328024326703361630109888417839241959507572247284807035235569619173792292786907845791904955103601652822519121908367187885509270025388641700821735345222087940578381210879116823013776808975766851829020659073"
 
-
 		optionalWarAttackableAlly = true
 		fistBaseAttack = 7
 		criticalHitChance = 7
 		noDamageToGuildMates = false
-		
 		noDamageToPartyMembers = false
-	
 
 		rookLevelTo = 5
 		rookLevelToLeaveRook = 8
@@ -134,7 +121,6 @@
 
 		premiumDaysToAddByGui = 10
 
-
 		useCapacity = true
 		defaultDepotSize = 500
 		defaultDepotSizePremium = 1000
@@ -142,23 +128,18 @@
 		cleanItemsInMap = false
 		playerFollowExhaust = 2000
 
-
 		tibiaClassicSlots = true
 		monsterSpawnWalkback = true
 		allowBlockSpawn = true
 
-
 		NoShareExpSummonMonster = false
 
-
 		enableLootBagDisplay = false
-
 
 		manualVersionConfig = false
 		versionMin = 770
 		versionMax = 772
 		versionMsg = "Only clients with protocol 7.70/72 allowed!"
-
 
 		tileHeightBlock = true
 		useStamina = true
@@ -166,10 +147,8 @@
 		runesHitTopCreature = false
 		charlistBasicInfo = false
 
-
 		noAttackHealingSimultaneus = true
 		enableCooldowns = true
-
 
 	loginTries = 20
 	retryTimeout = 5 * 1000
@@ -184,13 +163,11 @@
 	premiumPlayerSkipWaitList = true
 	packetsPerSecond = 50
 
-
 	deathListEnabled = true
 	deathListRequiredTime = 1 * 60 * 1000
 	deathAssistCount = 20
 	maxDeathRecords = 5
 	multipleNames = false
-
 
 	externalGuildWarsManagement = false
 	ingameGuildManagement = true
@@ -198,7 +175,6 @@
 	premiumDaysToFormGuild = 0
 	guildNameMinLength = 4
 	guildNameMaxLength = 20
-
 
 	buyableAndSellableHouses = true
 	houseNeedPremium = true
@@ -213,7 +189,6 @@
 	guildHalls = true
 	houseSkipInitialRent = true
 	houseProtection = true
-
 
 	timeBetweenActions = 200
 	timeBetweenExActions = 1000
@@ -235,8 +210,6 @@
 	mailAttemptsFadeTime = 5 * 60 * 1000
 	mailboxDisabledTowns = ""
 
-
-
 	daemonize = false
 	defaultPriority = "higher"
 	niceLevel = 5
@@ -247,9 +220,7 @@
 	confirmOutdatedVersion = false
 	skipItemsVersionCheck = false
 
-
 	maxMessageBuffer = 4
-
 
 	dataDirectory = "data/"
 	logsDirectory = "data/logs/"
@@ -267,16 +238,13 @@
 	vipListDefaultLimit = 20
 	vipListDefaultPremiumLimit = 100
 
-
 	allowChangeOutfit = true
 	allowChangeColors = true
 	allowChangeAddons = true
 	addonsOnlyPremium = true
 
-
 	ghostModeInvisibleEffect = false
 	ghostModeSpellEffects = true
-
 
 	idleWarningTime = 14 * 60 * 1000
 	idleKickTime = 15 * 60 * 1000
@@ -286,8 +254,7 @@
 	houseTileLimit = 10
 	tileLimit = 7
 
-
-	freePremium = true
+	freePremium = false
 	premiumForPromotion = true
 	updatePremiumStateAtStartup = true
 
@@ -300,27 +267,26 @@
 	pvpBlessingThreshold = 40
 	fairFightTimeRange = 60
 
-
-	experienceStages = true
+	experienceStages = false
 	rateExperience = 5.0
 	rateExperienceFromPlayers = 0
+	levelToOfflineTraining = 8
 	rateSkill = 3.0
+	rateSkillOffline = 1.5
 	rateMagic = 3.0
+	rateMagicOffline = 1.5
 	rateLoot = 2.0
 	rateSpawnMin = 1
 	rateSpawnMax = 1
 	formulaLevel = 5.0
 	formulaMagic = 1.0
-	
 		rateMonsterHealth = 1.0
 		rateMonsterMana = 1.0
 		rateMonsterAttack = 1.0
 		rateMonsterDefense = 1.0
 
-
 	minLevelThresholdForKilledPlayer = 0.9
 	maxLevelThresholdForKilledPlayer = 1.1
-
 
 	rateStaminaLoss = 1
 	rateStaminaGain = 3
@@ -332,7 +298,6 @@
 	rateStaminaUnderNormal = 0.5
 	staminaThresholdOnlyPremium = true
 
-
 	experienceShareRadiusX = 30
 	experienceShareRadiusY = 30
 	experienceShareRadiusZ = 1
@@ -341,14 +306,12 @@
 	extraPartyExperiencePercent = 5
 	experienceShareActivity = 2 * 60 * 1000
 
-
 	globalSaveEnabled = false
 	globalSaveHour = 8
 	globalSaveMinute = 0
 	shutdownAtGlobalSave = true
 	cleanMapAtGlobalSave = false
 	closeInstanceOnShutdown = true
-
 
 	minRateSpawn = 1
 	maxRateSpawn = 3
@@ -368,7 +331,6 @@
 	truncateLogOnStartup = false
 	logPlayersStatements = true
 
-
 	managerPort = 7171
 	managerLogs = true
 	managerPassword = ""
@@ -382,7 +344,6 @@
 	adminRequireLogin = true
 	adminEncryption = ""
 	adminEncryptionData = ""
-
 
 	saveGlobalStorage = false
 	bufferMutedOnSpellFailure = false

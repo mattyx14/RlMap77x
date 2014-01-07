@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <globalevents>
-<globalevent name="offtrain_add_minutes" interval="60000" event="script" value="offtrain_addMinutes.lua"/>
-
-		<globalevent name="effect" interval="3000" event="script" value="effects.lua"/>
-
-		<globalevent name="effect2" interval="3000" event="script" value="effects2.lua"/>
-
 	<!-- Server Events -->
 	<globalevent name="save" interval="900000" event="script" value="save.lua"/>
 	<globalevent name="clean" interval="7200000" event="script" value="clean.lua"/>
@@ -15,4 +9,9 @@
 
 	<!-- Examples -->
 	<!-- <globalevent name="timer_example" time="21:35:11" event="script" value="my_script.lua"/> -->
+
+	<!-- ??? -->
+	<globalevent name="offtrain_add_minutes" interval="60000" event="script" value="offtrain_addMinutes.lua"/>
+	<globalevent name="effect" interval="3000" event="script" value="effects.lua"/>
+	<globalevent name="effect2" interval="3000" event="script" value="effects2.lua"/>
 </globalevents>

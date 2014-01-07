@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <stages>
-	<config enabled="1"/>
 	<world id="0" multiplier="1">
 		<stage minlevel="1" maxlevel="7" multiplier="60"/>
 		<stage minlevel="8" maxlevel="29" multiplier="50"/>

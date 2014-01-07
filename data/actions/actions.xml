@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
-
---Offline Training--
-<action itemid="3739" event="script" value="other/offlinetraining.lua"/>
-<action itemid="1449" event="script" value="other/offlinetraining.lua"/>
-<action itemid="3705" event="script" value="other/offlinetraining.lua"/>
-<action itemid="1444" event="script" value="other/offlinetraining.lua"/>
-<action itemid="1448" event="script" value="other/offlinetraining.lua"/>
-
 	<!-- Default script, responsible for destroyItem -->
 	<action default="yes" event="script" value="default.lua"/>
 
@@ -66,7 +58,15 @@
 	<action itemid="2600" event="script" value="tools/inkwell.lua"/>
 	<action itemid="2785" event="script" value="other/blueberrybush.lua"/>
 
+	<!-- Use for Serve -->
+	<!-- offLineTraining -->
+	<action itemid="3739" event="script" value="other/offlinetraining.lua"/>
+	<action itemid="1449" event="script" value="other/offlinetraining.lua"/>
+	<action itemid="3705" event="script" value="other/offlinetraining.lua"/>
+	<action itemid="1444" event="script" value="other/offlinetraining.lua"/>
+	<action itemid="1448" event="script" value="other/offlinetraining.lua"/>
 
+	<!-- Rook -->
 	<action uniqueid="2999" script="rook/bear room/key.lua" />
 	<action uniqueid="3000" script="rook/bear room/bear room quest chain armor.lua" />
 	<action uniqueid="3001" script="rook/bear room/bear room quest brass helmet.lua" />
@@ -90,19 +90,18 @@
 	<action uniqueid="3023" script="rook/black book.lua" />
 	<action uniqueid="3024" script="rook/honey flower.lua" />
 	<!--<action actionid="3001" script="draconiakey.lua" />-->
-	
 
+	<!-- Outlaw Camp -->
 	<action uniqueid="3303" script="Jakundaf Desert/The Outlaw Camp Quest/3303.lua" />
 	<action uniqueid="3304" script="Jakundaf Desert/The Outlaw Camp Quest/3304.lua" />
 	<action uniqueid="3301" script="Jakundaf Desert/The Outlaw Camp Quest/3301.lua" />
 	<action uniqueid="3302" script="Jakundaf Desert/The Outlaw Camp Quest/3302.lua" />
 	<action uniqueid="3403" script="Jakundaf Desert/The Outlaw Camp Quest/bright_sword.lua" />
-	
-
 	<action uniqueid="3400" script="Jakundaf Desert/The Outlaw Camp Quest/oven.lua" />
 	<action uniqueid="3401" script="Jakundaf Desert/The Outlaw Camp Quest/power switch.lua" />
 	<action uniqueid="3402" script="Jakundaf Desert/The Outlaw Camp Quest/power burn.lua" />
 
+	<!-- Thais -->
 	<action uniqueid="4000" script="thais/Battle Axe Quest/battle_axe.lua" />
 	<action uniqueid="4001" script="thais/Deeper Fibula Quest/dwarven ring.lua" />
 	<action uniqueid="4002" script="thais/Deeper Fibula Quest/elven amulet.lua" />
@@ -123,7 +122,7 @@
 	<action actionid="4017" script="thais/Thais Lighthouse Quest/tpswitch.lua" />
 	<action actionid="4018" script="thais/Thais Lighthouse Quest/dark_shield.lua" />
 
-
+	<!-- Venore -->
 	<action uniqueid="4500" script="venore/Blood Herb Quest/blood_herb.lua" />
 	<action uniqueid="4501" script="venore/The Black Knight Quest/key.lua" />
 	<action uniqueid="4502" script="venore/The Black Knight Quest/crown armor.lua" />
@@ -131,12 +130,9 @@
 	<action uniqueid="4504" script="venore/Time Ring Quest/crystal_ball.lua" />
 	<action uniqueid="4505" script="venore/Time Ring Quest/elven_amulet.lua" />
 	<action uniqueid="4506" script="venore/Time Ring Quest/time_ring.lua" />
-	
-	
 	<action actionid="4600" script="venore/Pits of inferno/oil_lever.lua" />
 
-
-
+	<!-- Kazordoon -->
 	<action uniqueid="8000" script="Kazordoon/Crusader Helmet Quest/crusader.lua" />
 	<action uniqueid="8001" script="Kazordoon/Paradox Tower Quest/key.lua" />
 	<action actionid="8002" script="Kazordoon/Paradox Tower Quest/paradox_lvl2.lua"/>
@@ -157,6 +153,7 @@
 	<action actionid="8023" script="Kazordoon/elevator1.lua" />
 	<action actionid="8024" script="Kazordoon/elevator2.lua" />
 
+	<!-- Carlin -->
 	<action uniqueid="9000" script="carlin/griffin shield quest/obsidian.lua" />
 	<action uniqueid="9001" script="carlin/griffin shield quest/griffin.lua" />
 	<action uniqueid="9002" script="carlin/griffin shield quest/dwarven_axe.lua" />
@@ -173,8 +170,8 @@
 	<action uniqueid="9024" script="carlin/The Queen of the Banshees Quest/boh_chest.lua" />
 	<action uniqueid="9025" script="carlin/brooch.lua" />
 	<action uniqueid="9026" script="carlin/book.lua" />
-	
 
+	<!-- Ab Dendriel -->
 	<action uniqueid="9500" script="Ab'Dendriel/Elvenbane Quest/bag1.lua" />
 	<action uniqueid="9501" script="Ab'Dendriel/Elvenbane Quest/bag2.lua" />
 	<action uniqueid="9502" script="Ab'Dendriel/Elvenbane Quest/dwarven_shield.lua" />
@@ -186,8 +183,8 @@
 	<action uniqueid="9508" script="Ab'Dendriel/Draconia Quest/stone switch.lua" />
 	<action uniqueid="9509" script="Ab'Dendriel/Draconia Quest/bag1.lua" />
 	<action uniqueid="9510" script="Ab'Dendriel/Draconia Quest/bag2.lua" />
-	
 
+	<!-- Edron -->
 	<action uniqueid="10000" script="Edron/Barbarian Axe Quest/reward.lua" />
 	<action uniqueid="10001" script="Edron/Barbarian Axe Quest/switch.lua" />
 	<action uniqueid="10002" script="Edron/Demon Helmet Quest/dh_switch.lua" />
@@ -212,15 +209,11 @@
 	<action uniqueid="10021" script="Edron/Vampire Shield Quest/dragon lance.lua" />
 	<action uniqueid="10022" script="Edron/Vampire Shield Quest/vampire shield.lua" />
 	<action uniqueid="10023" script="Edron/Parchment Room Quest/bag.lua" />
-	
-	
 	<action uniqueid="10024" script="Edron/upgrade/upgrade.lua" />
 
+	<!-- Darashia -->
 	<action uniqueid="10100" script="Darashia/Plate Armor Quest/plate_armor.lua" />
 	<action uniqueid="10101" script="Darashia/Medusa Shield Quest/reward.lua" />
-
-
-
 	<action uniqueid="10102" script="Jakundaf Desert/The Desert Dungeons Quest/desert_quest.lua" />
 	<action uniqueid="10103" script="Jakundaf Desert/The Desert Dungeons Quest/100 platinum coins.lua" />
 	<action uniqueid="10104" script="Jakundaf Desert/The Desert Dungeons Quest/green bag.lua" />
@@ -231,9 +224,7 @@
 	<action uniqueid="10109" script="Jakundaf Desert/poh/power bolt.lua" />
 	<action uniqueid="10110" script="Jakundaf Desert/poh/ornamented shield.lua" />
 
-
-
-<action itemid="2345" script="vip.lua"/>
-<action itemid="2327" script="blessing.lua"/>
-
+	<!-- Others -->
+	<action itemid="2345" script="vip.lua"/>
+	<action itemid="2327" script="blessing.lua"/>
 </actions>

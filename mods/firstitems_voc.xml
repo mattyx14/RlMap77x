@@ -22,17 +22,56 @@
 		end
 
 		-- All Vocation
+			-- BackPack -- Rope -- in Backpack
+			doAddContainerItem(doPlayerAddItem(cid, 1988, 1), 2120, 1)
+			-- Brass Armor -- Body
+			doPlayerAddItem(cid, 2465, 1)
+			-- Steel Helmet -- Head
+			doPlayerAddItem(cid, 2457, 1)
 
-			-- Jacket
-			doPlayerAddItem(cid, 2650, 1)
+			-- Sorcerer - Druid (shield) -- Hand
+			if isSorcerer(cid) or isDruid(cid) then
+				doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT," "..getPlayerName(cid).." now have the first items of "..getPlayerVocationName(cid)..". Now require to get a wand or rod, request Josue NPC.")
+				-- SpellBook Shield -- Right Hand
+				doPlayerAddItem(cid, 2175, 1)
+			end
 
-			-- Club
-			doPlayerAddItem(cid, 2382, 1)
-			-- Bag
-			doPlayerAddItem(cid, 1987, 1)
-			-- Apple
-			doPlayerAddItem(cid, 2674, 1)
+			-- Paladin - Knight (Shield) -- Hand
+			if isKnight(cid) or isPaladin(cid) then
+				doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT," "..getPlayerName(cid).." now have the first items of "..getPlayerVocationName(cid)..".")
+				-- Bonelord Shield -- Right Hand
+				doPlayerAddItem(cid, 2518, 1)
+			end
 
+			-- Paladin - Knight (Weapon) -- Hand
+			if isPaladin(cid) then
+				doPlayerAddItem(cid, 2389, 20) -- Spear -- Left Hand
+			end
+
+			-- Knight (Weapon) -- Hand
+			if isKnight(cid) then
+				doPlayerAddItem(cid, 2398, 1) -- Daramanian mace
+			end
+
+		-- All Vocation
+			-- Brass Legs -- in Feet
+			doPlayerAddItem(cid, 2478, 1)
+			-- Leather Boots -- in Boots
+			doPlayerAddItem(cid, 2643, 1)
+			-- Scarf -- in Necklacke
+			doPlayerAddItem(cid, 2661, 1)
+			-- Platinum Coin -- in Arrows
+			doPlayerAddItem(cid, 2152, 1)
+			-- Shovel -- in Backpack
+			doPlayerAddItem(cid, 2554, 1)
+			-- Crystal Ring -- in Ring
+			doPlayerAddItem(cid, 2124, 1)
+
+		-- Knight (Weapon) -- in Backpack
+		if isKnight(cid) then
+			doPlayerAddItem(cid, 2376, 1) -- Sword
+			doPlayerAddItem(cid, 2386, 1) -- Axe
+		end
 
 	setPlayerStorageValue(cid, config.storage, 1)
 	]]></event>
