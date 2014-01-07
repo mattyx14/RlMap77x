@@ -424,6 +424,7 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage& msg)
 
 	OperatingSystem_t operatingSystem = (OperatingSystem_t)msg.get<uint16_t>();
 	uint16_t version = msg.get<uint16_t>();
+	#ifdef _MULTIPLATFORM77
 	if(!RSA_decrypt(msg))
 	{
 		disconnect();
@@ -433,6 +434,7 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage& msg)
 	uint32_t key[4] = {msg.get<uint32_t>(), msg.get<uint32_t>(), msg.get<uint32_t>(), msg.get<uint32_t>()};
 	enableXTEAEncryption();
 	setXTEAKey(key);
+	#endif
 
 	if(operatingSystem >= CLIENTOS_OTCLIENT_LINUX)
 		sendExtendedOpcode(0x00, std::string());
@@ -896,10 +898,15 @@ void ProtocolGame::parseViolationWindow(NetworkMessage& msg)
 	uint16_t statementId = 0;
 	std::string target = msg.getString();
 	uint8_t reason = msg.get<char>();
+	#ifdef _MULTIPLATFORM77
 	ViolationAction_t action = (ViolationAction_t)msg.get<char>();
 	std::string comment = msg.getString();
 	statementId = msg.get<uint16_t>();
 	/*channelId = */msg.get<uint16_t>();
+	#else
+	std::string comment = msg.getString();
+	ViolationAction_t action = (ViolationAction_t)msg.get<char>();
+	#endif
 	bool ipBanishment = (msg.get<char>() == 0x01);
 	addGameTask(&Game::playerViolationWindow, player->getID(), target,
 		reason, action, comment, "", statementId, ipBanishment);
@@ -988,7 +995,11 @@ void ProtocolGame::parseSetOutfit(NetworkMessage& msg)
 {
 	Outfit_t newOutfit = player->defaultOutfit;
 	if(g_config.getBool(ConfigManager::ALLOW_CHANGEOUTFIT))
+		#ifdef _MULTIPLATFORM77
 		newOutfit.lookType = msg.get<uint16_t>();
+		#else
+		newOutfit.lookType = msg.get<char>();
+		#endif
 	else
 		msg.skip(2);
 
@@ -2055,11 +2066,13 @@ void ProtocolGame::sendTextWindow(uint32_t windowTextId, Item* item, uint16_t ma
 		msg->putString(item->getText());
 	}
 
+	#ifdef _MULTIPLATFORM77
 	const std::string& writer = item->getWriter();
 	if(writer.size())
 		msg->putString(writer);
 	else
 		msg->putString("");
+	#endif
 }
 
 void ProtocolGame::sendHouseWindow(uint32_t windowTextId, House*,
@@ -2086,8 +2099,13 @@ void ProtocolGame::sendOutfitWindow()
 	msg->put<char>(0xC8);
 	AddCreatureOutfit(msg, player, player->getDefaultOutfit(), true);
 
+	#ifdef _MULTIPLATFORM77
 	msg->put<uint16_t>(player->sex % 2 ? 128 : 136);
 	msg->put<uint16_t>(player->isPremium() ? (player->sex % 2 ? 134 : 142) : (player->sex % 2 ? 131 : 139));
+	#else
+	msg->put<char>(player->sex % 2 ? 128 : 136);
+	msg->put<char>(player->isPremium() ? (player->sex % 2 ? 134 : 142) : (player->sex % 2 ? 131 : 139));
+	#endif
 
 	player->hasRequestedOutfit(true);
 }
@@ -2183,7 +2201,11 @@ void ProtocolGame::AddMagicEffect(NetworkMessage_ptr msg, const Position& pos, u
 {
 	msg->put<char>(0x83);
 	msg->putPosition(pos);
+	#ifdef _MULTIPLATFORM76
 	msg->put<char>(type + 1);
+	#else
+	msg->put<char>(type);
+	#endif
 }
 
 void ProtocolGame::AddDistanceShoot(NetworkMessage_ptr msg, const Position& from, const Position& to,
@@ -2192,7 +2214,11 @@ void ProtocolGame::AddDistanceShoot(NetworkMessage_ptr msg, const Position& from
 	msg->put<char>(0x85);
 	msg->putPosition(from);
 	msg->putPosition(to);
+	#ifdef _MULTIPLATFORM76
 	msg->put<char>(type + 1);
+	#else
+	msg->put<char>(type);
+	#endif
 }
 
 void ProtocolGame::AddCreature(NetworkMessage_ptr msg, const Creature* creature, bool known, uint32_t remove)
@@ -2239,13 +2265,19 @@ void ProtocolGame::AddPlayerStats(NetworkMessage_ptr msg)
 	uint32_t experience = player->getExperience();
 	msg->put<uint32_t>(experience);
 
+	#ifdef _MULTIPLATFORM76
 	msg->put<uint16_t>(player->getPlayerInfo(PLAYERINFO_LEVEL));
+	#else
+	msg->put<char>(player->getPlayerInfo(PLAYERINFO_LEVEL));
+	#endif
 	msg->put<char>(player->getPlayerInfo(PLAYERINFO_LEVELPERCENT));
 	msg->put<uint16_t>(player->getPlayerInfo(PLAYERINFO_MANA));
 	msg->put<uint16_t>(player->getPlayerInfo(PLAYERINFO_MAXMANA));
 	msg->put<char>(player->getPlayerInfo(PLAYERINFO_MAGICLEVEL));
 	msg->put<char>(player->getPlayerInfo(PLAYERINFO_MAGICLEVELPERCENT));
+	#ifdef _MULTIPLATFORM76
 	msg->put<char>(player->getPlayerInfo(PLAYERINFO_SOUL));
+	#endif
 }
 
 void ProtocolGame::AddPlayerSkills(NetworkMessage_ptr msg)
@@ -2262,7 +2294,9 @@ void ProtocolGame::AddCreatureSpeak(NetworkMessage_ptr msg, const Creature* crea
 	std::string text, uint16_t channelId, Position* pos, uint32_t statementId)
 {
 	msg->put<char>(0xAA);
+	#ifdef _MULTIPLATFORM77
 	msg->put<uint32_t>(0);
+	#endif
 	if(creature)
 	{
 		if(creature->getSpeakType() != MSG_NONE)
@@ -2338,7 +2372,11 @@ void ProtocolGame::AddCreatureOutfit(NetworkMessage_ptr msg, const Creature* cre
 	if(outfitWindow || (!creature->isInvisible() && (!creature->isGhost()
 		|| !g_config.getBool(ConfigManager::GHOST_INVISIBLE_EFFECT))))
 	{
+		#ifdef _MULTIPLATFORM77
 		msg->put<uint16_t>(outfit.lookType);
+		#else
+		msg->put<char>(outfit.lookType);
+		#endif
 		if(outfit.lookType)
 		{
 			msg->put<char>(outfit.lookHead);
@@ -2353,7 +2391,11 @@ void ProtocolGame::AddCreatureOutfit(NetworkMessage_ptr msg, const Creature* cre
 	}
 	else
 	{
+		#ifdef _MULTIPLATFORM77
 		msg->put<uint16_t>(0x00);
+		#else
+		msg->put<char>(0x00);
+		#endif
 		msg->put<uint16_t>(0x00);
 	}
 }
@@ -2560,7 +2602,9 @@ void ProtocolGame::sendChannelMessage(std::string author, std::string text, Mess
 		return;
 
 	msg->put<char>(0xAA);
+	#ifdef _MULTIPLATFORM77
 	msg->put<uint32_t>(0);
+	#endif
 	msg->putString(author);
 	msg->put<char>(type);
 	msg->put<uint16_t>(channel);

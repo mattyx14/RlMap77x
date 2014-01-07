@@ -335,9 +335,9 @@ bool ConfigManager::load()
 	m_confNumber[GUI_PREMIUM_DAYS] = getGlobalNumber("premiumDaysToAddByGui", 30);
 	m_confNumber[LEVEL_TO_OFFLINE] = getGlobalNumber("levelToOfflineTraining", 8);
 	m_confBool[MANUAL_ADVANCED_CONFIG] = getGlobalBool("manualVersionConfig", false);
-	m_confNumber[VERSION_MIN] = getGlobalNumber("versionMin", 770);
-	m_confNumber[VERSION_MAX] = getGlobalNumber("versionMax", 772);
-	m_confString[VERSION_MSG] = getGlobalString("versionMsg", "Only clients with protocol 7.70/72 allowed!");
+	m_confNumber[VERSION_MIN] = getGlobalNumber("versionMin", CLIENT_VERSION_MIN);
+	m_confNumber[VERSION_MAX] = getGlobalNumber("versionMax", CLIENT_VERSION_MAX);
+	m_confString[VERSION_MSG] = getGlobalString("versionMsg", "Only clients with protocol " CLIENT_VERSION_STRING " allowed!");
 	m_confBool[SUMMONS_DROP_CORPSE] = getGlobalBool("summonsDropCorpse", true);
 	m_confBool[TILE_HEIGHT_BLOCK] = getGlobalBool("tileHeightBlock", false);
 	m_confBool[USE_STAMINA] = getGlobalBool("useStamina", true);

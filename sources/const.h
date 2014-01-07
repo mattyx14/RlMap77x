@@ -415,7 +415,9 @@ enum PlayerFlags
 	PlayerFlag_IgnoredByMonsters,				//2^8 = 256
 	PlayerFlag_NotGainInFight,					//2^9 = 512
 	PlayerFlag_HasInfiniteMana,					//2^10 = 1024
+	#ifdef _MULTIPLATFORM76
 	PlayerFlag_HasInfiniteSoul,					//2^11 = 2048
+	#endif
 	PlayerFlag_HasNoExhaustion,					//2^12 = 4096
 	PlayerFlag_CannotUseSpells,					//2^13 = 8192
 	PlayerFlag_CannotPickupItem,				//2^14 = 16384

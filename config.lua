@@ -136,11 +136,6 @@
 
 		enableLootBagDisplay = false
 
-		manualVersionConfig = false
-		versionMin = 770
-		versionMax = 772
-		versionMsg = "Only clients with protocol 7.70/72 allowed!"
-
 		tileHeightBlock = true
 		useStamina = true
 		autoStack = true

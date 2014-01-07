@@ -1540,8 +1540,10 @@ void LuaInterface::registerFunctions()
 	//getPlayerMoney(cid)
 	lua_register(m_luaState, "getPlayerMoney", LuaInterface::luaGetPlayerMoney);
 
+	#ifdef _MULTIPLATFORM76
 	//getPlayerSoul(cid[, ignoreModifiers = false])
 	lua_register(m_luaState, "getPlayerSoul", LuaInterface::luaGetPlayerSoul);
+	#endif
 
 	//getPlayerFreeCap(cid)
 	lua_register(m_luaState, "getPlayerFreeCap", LuaInterface::luaGetPlayerFreeCap);
@@ -1759,8 +1761,10 @@ void LuaInterface::registerFunctions()
 	//doPlayerAddSpentMana(cid, amount[, useMultiplier = true])
 	lua_register(m_luaState, "doPlayerAddSpentMana", LuaInterface::luaDoPlayerAddSpentMana);
 
+	#ifdef _MULTIPLATFORM76
 	//doPlayerAddSoul(cid, amount)
 	lua_register(m_luaState, "doPlayerAddSoul", LuaInterface::luaDoPlayerAddSoul);
+	#endif
 
 	//doPlayerAddItem(cid, itemid[, count/subtype = 1[, canDropOnMap = true[, slot = 0]]])
 	//doPlayerAddItem(cid, itemid[, count = 1[, canDropOnMap = true[, subtype = 1[, slot = 0]]]])
@@ -5479,6 +5483,7 @@ int32_t LuaInterface::luaDoPlayerSetSex(lua_State* L)
 	return 1;
 }
 
+#ifdef _MULTIPLATFORM76
 int32_t LuaInterface::luaDoPlayerAddSoul(lua_State* L)
 {
 	//doPlayerAddSoul(cid, amount)
@@ -5498,6 +5503,7 @@ int32_t LuaInterface::luaDoPlayerAddSoul(lua_State* L)
 
 	return 1;
 }
+#endif
 
 int32_t LuaInterface::luaGetPlayerItemCount(lua_State* L)
 {
@@ -5762,6 +5768,7 @@ int32_t LuaInterface::luaGetPlayerLight(lua_State* L)
 	}
 }
 
+#ifdef _MULTIPLATFORM76
 int32_t LuaInterface::luaGetPlayerSoul(lua_State* L)
 {
 	//getPlayerSoul(cid[, ignoreModifiers = false])
@@ -5780,6 +5787,7 @@ int32_t LuaInterface::luaGetPlayerSoul(lua_State* L)
 
 	return 1;
 }
+#endif
 
 int32_t LuaInterface::luaDoPlayerAddExperience(lua_State* L)
 {
@@ -9175,9 +9183,11 @@ int32_t LuaInterface::luaGetVocationInfo(lua_State* L)
 	setField(L, "baseSpeed", voc->getBaseSpeed());
 	setField(L, "fromVocation", voc->getFromVocation());
 	setField(L, "promotedVocation", Vocations::getInstance()->getPromotedVocation(id));
+	#ifdef _MULTIPLATFORM76
 	setField(L, "soul", voc->getGain(GAIN_SOUL));
 	setField(L, "soulAmount", voc->getGainAmount(GAIN_SOUL));
 	setField(L, "soulTicks", voc->getGainTicks(GAIN_SOUL));
+	#endif
 	setField(L, "capacity", voc->getGainCap());
 	setFieldBool(L, "attackable", voc->isAttackable());
 	setFieldBool(L, "needPremium", voc->isPremiumNeeded());

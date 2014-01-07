@@ -18,6 +18,44 @@
 #ifndef __DEFINITIONS__
 #define __DEFINITIONS__
 
+// Compatible with 7.40 to 7.72
+#define SOFTWARE_NAME "OTX Server"
+#define SOFTWARE_VERSION "2"
+#define MINOR_VERSION "8"
+#define PATCH_VERSION "3"
+#define REVISION_VERSION "4505"
+#define SOFTWARE_CODENAME "Zilart Prince"
+#define SOFTWARE_DEVELOPERS "Kaiser, Comedinhasss, Emma, Kazbin and The Forgotten Server Developers"
+#define FORUMS "www.blacktibia.org - www.tibiaking.com - www.otland.net"
+
+#if defined(_MULTIPLATFORM77)
+	#define _MULTIPLATFORM76
+	#define ITEMS_PATH std::string("77")
+	#define CLIENT_VERSION_ITEMS 3
+	#define CLIENT_VERSION_MIN 770
+	#define CLIENT_VERSION_MAX 772
+	#define CLIENT_VERSION_STRING "7.70/72"
+#elif defined(_MULTIPLATFORM76)
+	#define ITEMS_PATH std::string("76")
+	#define CLIENT_VERSION_ITEMS 3
+	#define CLIENT_VERSION_MIN 760
+	#define CLIENT_VERSION_MAX 760
+	#define CLIENT_VERSION_STRING "7.60"
+#else
+	#define ITEMS_PATH std::string("74")
+	#define CLIENT_VERSION_ITEMS 1
+	#define CLIENT_VERSION_MIN 740
+	#define CLIENT_VERSION_MAX 741
+	#define CLIENT_VERSION_STRING "7.40/41"
+#endif
+
+//#define CLIENT_VERSION_DATA
+#define CLIENT_VERSION_DAT 0
+#define CLIENT_VERSION_SPR 0
+#define CLIENT_VERSION_PIC 0
+
+#define VERSION_DATABASE 2
+
 #undef MULTI_SQL_DRIVERS
 #define SQL_DRIVERS __USE_SQLITE__+__USE_MYSQL__+__USE_PGSQL__
 

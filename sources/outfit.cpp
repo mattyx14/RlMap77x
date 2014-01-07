@@ -389,8 +389,10 @@ bool Outfits::parseOutfitNode(xmlNodePtr p)
 				if(readXMLInteger(configNode, "maxMana", intValue))
 					outfit.stats[STAT_MAXMANA] = intValue;
 
+				#ifdef _MULTIPLATFORM76
 				if(readXMLInteger(configNode, "soul", intValue))
 					outfit.stats[STAT_SOUL] = intValue;
+				#endif
 
 				if(readXMLInteger(configNode, "level", intValue))
 					outfit.stats[STAT_LEVEL] = intValue;
@@ -405,8 +407,10 @@ bool Outfits::parseOutfitNode(xmlNodePtr p)
 				if(readXMLInteger(configNode, "maxManaPercent", intValue))
 					outfit.statsPercent[STAT_MAXMANA] = intValue;
 
+				#ifdef _MULTIPLATFORM76
 				if(readXMLInteger(configNode, "soulPercent", intValue))
 					outfit.statsPercent[STAT_SOUL] = intValue;
+				#endif
 
 				if(readXMLInteger(configNode, "levelPercent", intValue))
 					outfit.statsPercent[STAT_LEVEL] = intValue;
@@ -459,8 +463,10 @@ bool Outfits::parseOutfitNode(xmlNodePtr p)
 				if(readXMLString(configNode, "regeneration", strValue) && booleanString(strValue))
 					outfit.conditionSuppressions |= CONDITION_REGENERATION;
 
+				#ifdef _MULTIPLATFORM76
 				if(readXMLString(configNode, "soul", strValue) && booleanString(strValue))
 					outfit.conditionSuppressions |= CONDITION_SOUL;
+				#endif
 
 				if(readXMLString(configNode, "drown", strValue) && booleanString(strValue))
 					outfit.conditionSuppressions |= CONDITION_DROWN;

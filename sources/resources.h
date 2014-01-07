@@ -74,26 +74,4 @@
 	#define ID_MENU_ABOUT_DEVELOPERS 801
 	#define ID_MENU_ABOUT_GUI_EXECUTABLE 802
 #endif
-
-// Compatible with 7.40 to 7.72
-#define CLIENT_VERSION_MIN 770
-#define CLIENT_VERSION_MAX 772
-#define CLIENT_VERSION_ITEMS 3
-#define CLIENT_VERSION_STRING "7.72"
-
-#define SOFTWARE_NAME "OTX Server"
-#define SOFTWARE_VERSION "2"
-#define MINOR_VERSION "8"
-#define PATCH_VERSION "3"
-#define REVISION_VERSION ""
-#define SOFTWARE_CODENAME "Zilart Prince"
-#define SOFTWARE_DEVELOPERS "Kaiser, Comedinhasss, Emma, Kazbin and The Forgotten Server Developers"
-#define FORUMS "www.blacktibia.org - www.tibiaking.com - www.otland.net"
-
-//#define CLIENT_VERSION_DATA
-#define CLIENT_VERSION_DAT 0
-#define CLIENT_VERSION_SPR 0
-#define CLIENT_VERSION_PIC 0
-
-#define VERSION_DATABASE 2
 #endif
