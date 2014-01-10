@@ -6,6 +6,7 @@ Changes Rev 4:
 	* Fixed error on redSkull
 	* Fixed writer error on protocol 7.6
 	* Fixed error on spells // rune usage
+	* Fixed damage errors players/monsters
 	* sendStats no required on stamina is (luaFunction and no send packets to client)
 ]
 
