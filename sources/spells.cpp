@@ -991,28 +991,25 @@ bool Spell::checkRuneSpell(Player* player, const Position& toPos)
 		return false;
 	}
 
-	if(!targetCreature)
+	if(needTarget && !targetCreature)
 	{
 		player->sendCancelMessage(RET_CANONLYUSETHISRUNEONCREATURES);
 		g_game.addMagicEffect(player->getPosition(), MAGIC_EFFECT_POFF);
 		return false;
 	}
 
-	Player* targetPlayer = targetCreature->getPlayer();
-	if(!isAggressive || !targetPlayer || Combat::isInPvpZone(player, targetPlayer)
-		|| player->getSkullType(targetPlayer) != SKULL_NONE)
+	if(!targetCreature)
 		return true;
 
-	if(player->getSecureMode() == SECUREMODE_ON)
+	Player* targetPlayer = targetCreature->getPlayer();
+	if(isAggressive && needTarget && !Combat::isInPvpZone(player, targetPlayer) && player->getSecureMode() == SECUREMODE_ON && (targetPlayer && targetPlayer != player && targetPlayer->getSkull() == SKULL_NONE))
 	{
 		player->sendCancelMessage(RET_TURNSECUREMODETOATTACKUNMARKEDPLAYERS);
 		g_game.addMagicEffect(player->getPosition(), MAGIC_EFFECT_POFF);
 		return false;
 	}
 
-	player->sendCancelMessage(RET_YOUMAYNOTATTACKTHISPLAYER);
-	g_game.addMagicEffect(player->getPosition(), MAGIC_EFFECT_POFF);
-	return false;
+	return true;
 }
 
 void Spell::postSpell(Player* player) const
