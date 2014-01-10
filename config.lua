@@ -144,6 +144,7 @@
 
 		noAttackHealingSimultaneus = true
 		enableCooldowns = true
+		classicDamageOnWeapons = true
 
 	loginTries = 20
 	retryTimeout = 5 * 1000

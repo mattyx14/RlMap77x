@@ -346,6 +346,7 @@ bool ConfigManager::load()
 	m_confBool[CHARLIST_INFO] = getGlobalBool("charlistBasicInfo", false);
 	m_confBool[NO_ATTACKHEALING_SIMULTANEUS] = getGlobalBool("noAttackHealingSimultaneus", true);
 	m_confBool[ENABLE_COOLDOWNS] = getGlobalBool("enableCooldowns", true);
+	m_confBool[CLASSIC_DAMAGE_ON_WEAPONS] = getGlobalBool("classicDamageOnWeapons", true);
 
 	m_loaded = true;
 	return true;

@@ -318,6 +318,7 @@ class ConfigManager
 			RUNES_HIT_TOP_CREATURE,
 			NO_ATTACKHEALING_SIMULTANEUS,
 			ENABLE_COOLDOWNS,
+			CLASSIC_DAMAGE_ON_WEAPONS,
 			LAST_BOOL_CONFIG /* this must be the last one */
 		};
 
