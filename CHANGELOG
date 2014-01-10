@@ -1,7 +1,11 @@
 Changes Rev 4:
 [
 	* Added new config classicDamageOnWeapons
+	* Added missing luaFunction luaDoPlayerSetWalkthrough
 	* Fixed multiplier_t and gain_t on vocations.xml
+	* Fixed error on redSkull
+	* Fixed writer error on protocol 7.6
+	* sendStats no required on stamina is (luaFunction and no send packets to client)
 ]
 
 Changes Rev 3:

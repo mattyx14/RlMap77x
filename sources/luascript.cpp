@@ -8902,7 +8902,6 @@ int32_t LuaInterface::luaDoPlayerSetStamina(lua_State* L)
 	if(Player* player = env->getPlayerByUID(popNumber(L)))
 	{
 		player->setStaminaMinutes(minutes);
-		player->sendStats();
 		lua_pushboolean(L, true);
 	}
 	else

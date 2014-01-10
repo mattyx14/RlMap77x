@@ -562,9 +562,7 @@ bool IOLoginData::loadPlayer(Player* player, const std::string& name, bool preLo
 	player->defaultOutfit.lookFeet = result->getDataInt("lookfeet");
 
 	player->currentOutfit = player->defaultOutfit;
-	Skulls_t skull = SKULL_RED;
-
-	player->setSkullEnd((time_t)result->getDataInt("skulltime"), true, skull);
+	player->setSkullEnd((time_t)result->getDataInt("skulltime"), true, SKULL_RED);
 	player->saving = result->getDataInt("save") != 0;
 
 	player->town = result->getDataInt("town_id");
@@ -894,10 +892,7 @@ bool IOLoginData::savePlayer(Player* player, bool preSave/* = true*/, bool shall
 	query << "`sex` = " << player->sex << ", ";
 	query << "`balance` = " << player->balance << ", ";
 	query << "`stamina` = " << player->getStamina() << ", ";
-
-	Skulls_t skull = SKULL_RED;
-
-	query << "`skull` = " << skull << ", ";
+	query << "`skull` = " << SKULL_RED << ", ";
 	query << "`skulltime` = " << player->getSkullEnd() << ", ";
 	query << "`promotion` = " << player->promotionLevel << ", ";
 	if(g_config.getBool(ConfigManager::STORE_DIRECTION))

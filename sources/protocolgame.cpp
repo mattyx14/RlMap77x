@@ -2066,7 +2066,7 @@ void ProtocolGame::sendTextWindow(uint32_t windowTextId, Item* item, uint16_t ma
 		msg->putString(item->getText());
 	}
 
-	#ifdef _MULTIPLATFORM77
+	#ifdef _MULTIPLATFORM76
 	const std::string& writer = item->getWriter();
 	if(writer.size())
 		msg->putString(writer);

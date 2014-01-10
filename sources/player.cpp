@@ -1351,8 +1351,6 @@ void Player::onCreatureAppear(const Creature* creature)
 
 				useStamina(ticks);
 			}
-
-			sendStats();
 		}
 	}
 
