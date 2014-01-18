@@ -8530,6 +8530,13 @@ int32_t LuaInterface::luaGetCreatureTarget(lua_State* L)
 	return 1;
 }
 
+int32_t LuaInterface::luaIsItemRune(lua_State* L)
+{
+	//isItemRune(itemid)
+	lua_pushboolean(L, Item::items[popNumber(L)].isRune());
+	return 1;
+}
+
 int32_t LuaInterface::luaIsSightClear(lua_State* L)
 {
 	//isSightClear(fromPos, toPos, floorCheck)

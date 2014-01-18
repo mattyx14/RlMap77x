@@ -3353,7 +3353,7 @@ int32_t Player::__getLastIndex() const
 	return SLOT_LAST;
 }
 
-uint32_t Player::__getItemTypeCount(uint16_t itemId, int32_t subType /*= -1*/) const
+uint32_t Player::__getItemTypeCount(uint16_t itemId, int32_t subType /*= -1*/, bool itemCount /*= true*/) const
 {
 	Item* item = NULL;
 	Container* container = NULL;
@@ -3365,7 +3365,7 @@ uint32_t Player::__getItemTypeCount(uint16_t itemId, int32_t subType /*= -1*/) c
 			continue;
 
 		if(item->getID() == itemId)
-			count += Item::countByType(item, subType);
+			count += Item::countByType(item, subType, itemCount);
 
 		if(!(container = item->getContainer()))
 			continue;
@@ -3373,7 +3373,7 @@ uint32_t Player::__getItemTypeCount(uint16_t itemId, int32_t subType /*= -1*/) c
 		for(ContainerIterator it = container->begin(), end = container->end(); it != end; ++it)
 		{
 			if((*it)->getID() == itemId)
-				count += Item::countByType(*it, subType);
+				count += Item::countByType(*it, subType, itemCount);
 		}
 	}
 
@@ -3382,7 +3382,7 @@ uint32_t Player::__getItemTypeCount(uint16_t itemId, int32_t subType /*= -1*/) c
 }
 
 std::map<uint32_t, uint32_t>& Player::__getAllItemTypeCount(std::map<uint32_t,
-	uint32_t>& countMap) const
+	uint32_t>& countMap, bool itemCount/* = true*/) const
 {
 	Item* item = NULL;
 	Container* container = NULL;
@@ -3391,12 +3391,12 @@ std::map<uint32_t, uint32_t>& Player::__getAllItemTypeCount(std::map<uint32_t,
 		if(!(item = inventory[i]))
 			continue;
 
-		countMap[item->getID()] += Item::countByType(item, -1);
+		countMap[item->getID()] += Item::countByType(item, -1, itemCount);
 		if(!(container = item->getContainer()))
 			continue;
 
 		for(ContainerIterator it = container->begin(), end = container->end(); it != end; ++it)
-			countMap[(*it)->getID()] += Item::countByType(*it, -1);
+			countMap[(*it)->getID()] += Item::countByType(*it, -1, itemCount);
 	}
 
 	return countMap;
