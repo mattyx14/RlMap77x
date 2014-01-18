@@ -1420,20 +1420,18 @@ uint32_t Tile::__getItemTypeCount(uint16_t itemId, int32_t subType /*= -1*/, boo
 	uint32_t count = 0;
 	for(ItemVector::const_iterator it = items->begin(); it != items->end(); ++it)
 	{
-		if((*it)->getID() == itemId)
+		if((*it)->getID() == itemId) count += Item::countByType(*it, subType, itemCount);
+			continue;
+
+		if(!itemCount)
 		{
-			if(!itemCount)
-			{
-				if((*it)->isRune())
-					count+= (*it)->getCharges();
-				else
-					count+= (*it)->getItemCount();
-			}
+			if((*it)->isRune())
+				count+= (*it)->getCharges();
 			else
 				count+= (*it)->getItemCount();
 		}
 		else
-			count += Item::countByType(*it, subType, itemCount);
+			count+= (*it)->getItemCount();
 	}
 
 	return count;
