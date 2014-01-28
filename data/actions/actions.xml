@@ -67,73 +67,74 @@
 	<action itemid="1448" event="script" value="other/offlinetraining.lua"/>
 
 	<!-- Rook -->
-	<action uniqueid="3003" script="rook/bear room/bear room quest switch.lua" />
-	<action uniqueid="3008" script="rook/doublet quest.lua" />
-	<action uniqueid="3009;3010" script="rook/sewer grate switch.lua" />
-	<action uniqueid="3024" script="rook/honey flower.lua" />
-	<!--<action actionid="3001" script="draconiakey.lua" />-->
+	<action actionid="3001" script="draconiakey.lua"/>
+	<action uniqueid="3003" script="rook/bear room/bear room quest switch.lua"/>
+	<action uniqueid="3008" script="rook/doublet quest.lua"/>
+	<action uniqueid="3009-3010" script="rook/sewer grate switch.lua"/>
+	<action uniqueid="3024" script="rook/honey flower.lua"/>
 
 	<!-- Outlaw Camp -->
-	<action uniqueid="3301" script="Jakundaf Desert/The Outlaw Camp Quest/3301.lua" />
-	<action uniqueid="3302" script="Jakundaf Desert/The Outlaw Camp Quest/3302.lua" />
-	<action uniqueid="3303" script="Jakundaf Desert/The Outlaw Camp Quest/3303.lua" />
-	<action uniqueid="3400" script="Jakundaf Desert/The Outlaw Camp Quest/oven.lua" />
-	<action uniqueid="3401" script="Jakundaf Desert/The Outlaw Camp Quest/power switch.lua" />
-	<action uniqueid="3402" script="Jakundaf Desert/The Outlaw Camp Quest/power burn.lua" />
+	<action uniqueid="3301" script="Jakundaf Desert/The Outlaw Camp Quest/3301.lua"/>
+	<action uniqueid="3302" script="Jakundaf Desert/The Outlaw Camp Quest/3302.lua"/>
+	<action uniqueid="3303" script="Jakundaf Desert/The Outlaw Camp Quest/3303.lua"/>
+	<action uniqueid="3400" script="Jakundaf Desert/The Outlaw Camp Quest/oven.lua"/>
+	<action uniqueid="3401" script="Jakundaf Desert/The Outlaw Camp Quest/power switch.lua"/>
+	<action uniqueid="3402" script="Jakundaf Desert/The Outlaw Camp Quest/power burn.lua"/>
 
 	<!-- Thais -->
-	<action uniqueid="4015" script="thais/Deeper Fibula Quest/fibula draw well.lua" />
-	<action actionid="4016" script="thais/Thais Lighthouse Quest/switch.lua" />
-	<action actionid="4017" script="thais/Thais Lighthouse Quest/tpswitch.lua" />
+	<action uniqueid="4015" script="thais/Deeper Fibula Quest/fibula draw well.lua"/>
+	<action actionid="4016" script="thais/Thais Lighthouse Quest/switch.lua"/>
+	<action actionid="4017" script="thais/Thais Lighthouse Quest/tpswitch.lua"/>
 
 	<!-- Venore -->
-	<action uniqueid="4500" script="venore/Blood Herb Quest/blood_herb.lua" />
-	<action uniqueid="4501" script="venore/The Black Knight Quest/key.lua" />
-	<action uniqueid="4502" script="venore/The Black Knight Quest/crown armor.lua" />
-	<action uniqueid="4503" script="venore/The Black Knight Quest/crown shield.lua" />
-	<action actionid="4600" script="venore/Pits of inferno/oil_lever.lua" />
+	<action uniqueid="4500" script="venore/Blood Herb Quest/blood_herb.lua"/>
+	<action uniqueid="4501" script="venore/The Black Knight Quest/key.lua"/>
+	<action uniqueid="4502" script="venore/The Black Knight Quest/crown armor.lua"/>
+	<action uniqueid="4503" script="venore/The Black Knight Quest/crown shield.lua"/>
+	<action actionid="4600" script="venore/Pits of inferno/oil_lever.lua"/>
 
 	<!-- Kazordoon -->
-	<action uniqueid="8001" script="Kazordoon/Paradox Tower Quest/key.lua" />
+	<action uniqueid="8001" script="Kazordoon/Paradox Tower Quest/key.lua"/>
 	<action actionid="8002" script="Kazordoon/Paradox Tower Quest/paradox_lvl2.lua"/>
 	<action actionid="8003" script="Kazordoon/Paradox Tower Quest/paradox_box.lua"/>
 	<action actionid="8004" script="Kazordoon/Paradox Tower Quest/paradox_lvl4.lua"/>
 	<action actionid="8005" script="Kazordoon/Paradox Tower Quest/paradox_lvl5.lua"/>
-	<action actionid="8023" script="Kazordoon/elevator1.lua" />
-	<action actionid="8024" script="Kazordoon/elevator2.lua" />
+	<action actionid="8023" script="Kazordoon/elevator1.lua"/>
+	<action actionid="8024" script="Kazordoon/elevator2.lua"/>
 
 	<!-- Carlin -->
 	<!-- REQUIRE ADD
-		<action uniqueid="9000" script="carlin/griffin shield quest/obsidian.lua" />
-		<action uniqueid="9001" script="carlin/griffin shield quest/griffin.lua" />
-		<action uniqueid="9002" script="carlin/griffin shield quest/dwarven_axe.lua" />
+		<action uniqueid="9000" script="carlin/griffin shield quest/obsidian.lua"/>
+		<action uniqueid="9001" script="carlin/griffin shield quest/griffin.lua"/>
+		<action uniqueid="9002" script="carlin/griffin shield quest/dwarven_axe.lua"/>
 	-->
-	<action uniqueid="9005" script="carlin/The Queen of the Banshees Quest/magic_wall_1.lua" />
-	<action uniqueid="9006" script="carlin/The Queen of the Banshees Quest/magic_wall_2.lua" />
-	<action actionid="9007" script="carlin/The Queen of the Banshees Quest/entrance_lever.lua" />
-	<action uniqueid="9025" script="carlin/brooch.lua" />
-	<action uniqueid="9026" script="carlin/book.lua" />
+	<action uniqueid="9005" script="carlin/The Queen of the Banshees Quest/magic_wall_1.lua"/>
+	<action uniqueid="9006" script="carlin/The Queen of the Banshees Quest/magic_wall_2.lua"/>
+	<action actionid="9007" script="carlin/The Queen of the Banshees Quest/entrance_lever.lua"/>
+	<action uniqueid="9025" script="carlin/brooch.lua"/>
+	<action uniqueid="9026" script="carlin/book.lua"/>
 
 	<!-- Ab Dendriel -->
-	<action uniqueid="9507" script="Ab'Dendriel/Draconia Quest/wall switch.lua" />
-	<action uniqueid="9508" script="Ab'Dendriel/Draconia Quest/stone switch.lua" />
+	<action uniqueid="9507" script="Ab'Dendriel/Draconia Quest/wall switch.lua"/>
+	<action uniqueid="9508" script="Ab'Dendriel/Draconia Quest/stone switch.lua"/>
 
 	<!-- REQUIRE ADD
-	<action uniqueid="10009-10013" script="Ankrahmun/The Ancient Tombs Quest/premio_tumbas.lua" /> -->
+	<action uniqueid="10009-10013" script="Ankrahmun/The Ancient Tombs Quest/premio_tumbas.lua"/> -->
 
 	<!-- Edron -->
-	<action uniqueid="10001" script="Edron/Barbarian Axe Quest/switch.lua" />
-	<action uniqueid="10002" script="Edron/Demon Helmet Quest/dh_switch.lua" />
-	<action uniqueid="10023" script="Edron/Parchment Room Quest/bag.lua" />
-	<action uniqueid="10009-10013" script="Edron/The Annihilator Quest/annihilator_lever.lua" />
-	<action uniqueid="10014" script="Edron/The Behemoth Quest/behemoth_lever.lua" />
+	<action uniqueid="10001" script="Edron/Barbarian Axe Quest/switch.lua"/>
+	<action uniqueid="10002" script="Edron/Demon Helmet Quest/dh_switch.lua"/>
+	<action uniqueid="10023" script="Edron/Parchment Room Quest/bag.lua"/>
+	<action uniqueid="10009-10013" script="Edron/The Annihilator Quest/annihilator_lever.lua"/>
+	<action uniqueid="10014" script="Edron/The Behemoth Quest/behemoth_lever.lua"/>
+
 	<!-- REQUIRE ADD
-	<action uniqueid="10024" script="Edron/Triple UH Rune Quest/triple uh.lua" /> -->
+	<action uniqueid="10024" script="Edron/Triple UH Rune Quest/triple uh.lua"/> -->
 
 	<!-- Darashia -->
-	<action uniqueid="10100" script="Darashia/Plate Armor Quest/plate_armor.lua" />
-	<action uniqueid="10102" script="Jakundaf Desert/The Desert Dungeons Quest/desert_quest.lua" />
-	<action uniqueid="10105" script="Jakundaf Desert/poh/switch.lua" />
+	<action uniqueid="10100" script="Darashia/Plate Armor Quest/plate_armor.lua"/>
+	<action uniqueid="10102" script="Jakundaf Desert/The Desert Dungeons Quest/desert_quest.lua"/>
+	<action uniqueid="10105" script="Jakundaf Desert/poh/switch.lua"/>
 
 	<!-- Others -->
 	<action itemid="2345" script="vip.lua"/>
