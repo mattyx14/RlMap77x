@@ -12,7 +12,7 @@ Linux:
 	./configure (no need to specify --enable-mysql
 	./build.sh or make
 	mv theotxserver ../../
-	Protocol version can be changed in the Makefile.am - $(OPTIONAL_FLAGS), just add -D_PROTOCOL77 where X is 6 or 7.
+	Protocol version can be changed in the Makefile.am - $(OPTIONAL_FLAGS), just add -_MULTIPLATFORM77 where X is 6 or 7.
 
 	-D_MULTIPLATFORM77
 	-D_MULTIPLATFORM76

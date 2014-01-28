@@ -21,10 +21,10 @@
 // Compatible with 7.40 to 7.72
 #define SOFTWARE_NAME "OTX Server"
 #define SOFTWARE_VERSION "2"
-#define MINOR_VERSION "8"
-#define PATCH_VERSION "3"
-#define REVISION_VERSION "4505"
-#define SOFTWARE_CODENAME "Zilart Prince"
+#define MINOR_VERSION "9"
+#define PATCH_VERSION "0"
+#define REVISION_VERSION "4539"
+#define SOFTWARE_CODENAME "Galaxy"
 #define SOFTWARE_DEVELOPERS "Kaiser, Comedinhasss, Emma, Kazbin and The Forgotten Server Developers"
 #define FORUMS "www.blacktibia.org - www.tibiaking.com - www.otland.net"
 
