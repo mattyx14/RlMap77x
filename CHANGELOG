@@ -1,3 +1,9 @@
+Changes Rev 5:
+[
+	* Fix: http://www.blacktibia.org/t33444p60-otx-server-29-version-galaxy#211883
+	* Update items.xml
+]
+
 Changes Rev 4:
 [
 	* Added new config classicDamageOnWeapons
