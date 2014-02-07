@@ -1,18 +1,21 @@
+local statue = {
+	[1444] = SKILL_SWORD,
+	[1449] = SKILL_AXE,
+	[3705] = SKILL_CLUB,
+	[3739] = SKILL_DISTANCE,
+	[1448] = SKILL__MAGLEVEL
+}
+
 function onUse(cid, item, fromPosition, itemEx, toPosition)
-	if(item.itemid == 1444) then -- sword
-		doCreatureSetStorage(cid, 62669, SKILL_SWORD)
-	elseif(item.itemid == 1449) then -- axe
-		doCreatureSetStorage(cid, 62669, SKILL_AXE)
-	elseif(item.itemid == 1448) then -- mlvl
-		doCreatureSetStorage(cid, 62669, SKILL__MAGLEVEL)
-	elseif(item.itemid == 3705) then -- club
-		doCreatureSetStorage(cid, 62669, SKILL_CLUB)
-	elseif(item.itemid == 3739) then -- distannce
-		doCreatureSetStorage(cid, 62669, SKILL_DISTANCE)
+	if isPlayerPzLocked(cid) then
+		return false
 	end
 
-	if item.actionid == 1000 then
+	if item.actionid == 1000 and getPlayerPremiumDays(cid) > 0 then
+		doPlayerSetOfflineTrainingSkill(cid, statue[item.itemid])
 		doRemoveCreature(cid)
+	else
+		doPlayerSendDefaultCancel(cid, RETURNVALUE_YOUNEEDPREMIUMACCOUNT)
 	end
 
 	return true

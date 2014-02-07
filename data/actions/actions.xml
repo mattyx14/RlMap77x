@@ -60,11 +60,7 @@
 
 	<!-- Use for Serve -->
 	<!-- offLineTraining -->
-	<action itemid="3739" event="script" value="other/offlinetraining.lua"/>
-	<action itemid="1449" event="script" value="other/offlinetraining.lua"/>
-	<action itemid="3705" event="script" value="other/offlinetraining.lua"/>
-	<action itemid="1444" event="script" value="other/offlinetraining.lua"/>
-	<action itemid="1448" event="script" value="other/offlinetraining.lua"/>
+	<action itemid="1444;1448;1449;3705;3739" event="script" value="other/offlinetraining.lua"/>
 
 	<!-- Rook -->
 	<action actionid="3001" script="draconiakey.lua"/>
