@@ -10,8 +10,5 @@
 	<event type="advance" name="AdvanceSave" event="script" value="advancesave.lua"/>
 	<event type="think" name="Idle" event="script" value="idle.lua"/>
 	<event type="think" name="SkullCheck" event="script" value="skullcheck.lua"/>
-
-	<!-- ??? -->
-	<event type="login" name="offtrain_PlayerLogin" event="script" value="offtrain_login.lua"/>
-	<event type="logout" name="offtrain_PlayerLogout" event="script" value="offtrain_logout.lua"/>
+	
 </creaturescripts>
