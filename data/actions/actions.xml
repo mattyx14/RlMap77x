@@ -63,7 +63,6 @@
 	<action itemid="1444;1448;1449;3705;3739" event="script" value="other/offlinetraining.lua"/>
 
 	<!-- Rook -->
-	<action actionid="3001" script="draconiakey.lua"/>
 	<action uniqueid="3003" script="rook/bear room/bear room quest switch.lua"/>
 	<action uniqueid="3008" script="rook/doublet quest.lua"/>
 	<action uniqueid="3009-3010" script="rook/sewer grate switch.lua"/>
