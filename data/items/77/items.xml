@@ -2424,21 +2424,21 @@
 		<attribute key="description" value="Small stones are flying from its tip."/>
 		<attribute key="weight" value="2500"/>
 		<attribute key="weaponType" value="wand"/>
-		<attribute key="shootType" value="smallearth"/>
+		<attribute key="shootType" value="poison"/>
 		<attribute key="range" value="3"/>
 	</item>
 	<item id="2182" article="a" name="snakebite rod">
 		<attribute key="description" value="It seems to twitch and quiver as if trying to escape your grip."/>
 		<attribute key="weight" value="1900"/>
 		<attribute key="weaponType" value="wand"/>
-		<attribute key="shootType" value="smallearth"/>
+		<attribute key="shootType" value="poison"/>
 		<attribute key="range" value="3"/>
 	</item>
 	<item id="2183" article="a" name="hailstorm rod">
 		<attribute key="description" value="It grants you the power of striking your foes with furious hailstorms."/>
 		<attribute key="weight" value="2700"/>
 		<attribute key="weaponType" value="wand"/>
-		<attribute key="shootType" value="smallice"/>
+		<attribute key="shootType" value="energy"/>
 		<attribute key="range" value="3"/>
 	</item>
 	<item id="2184" article="a" name="crystal wand">
@@ -2455,7 +2455,7 @@
 		<attribute key="description" value="Icecold rays of moonlight shimmer on its tip."/>
 		<attribute key="weight" value="2100"/>
 		<attribute key="weaponType" value="wand"/>
-		<attribute key="shootType" value="smallice"/>
+		<attribute key="shootType" value="energy"/>
 		<attribute key="range" value="3"/>
 	</item>
 	<item id="2187" article="a" name="wand of inferno">
@@ -7499,7 +7499,7 @@
 		<attribute key="weight" value="2200"/>
 		<attribute key="attack" value="32"/>
 		<attribute key="weaponType" value="distance"/>
-		<attribute key="shootType" value="huntingspear"/>
+		<attribute key="shootType" value="spear"/>
 		<attribute key="range" value="3"/>
 		<attribute key="breakChance" value="6"/>
 		<attribute key="ammoAction" value="moveback"/>
