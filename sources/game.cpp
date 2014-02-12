@@ -308,7 +308,7 @@ int32_t Game::loadMap(std::string filename)
 	if(!map)
 		map = new Map;
 
-	#ifdef _MULTIPLATFORM6
+	#ifdef _MULTIPLATFORM76
 	std::string file = getFilePath(FILE_TYPE_CONFIG, "world/" + filename);
 	if(!fileExists(file.c_str()))
 		file = getFilePath(FILE_TYPE_OTHER, "world/" + filename);
