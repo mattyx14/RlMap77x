@@ -152,7 +152,7 @@ bool argumentsHandler(StringVec args)
 
 			"\n"
 			"A server developed by: "SOFTWARE_DEVELOPERS".\n"
-			"Visit our forums for updates, support, and resources:\n";
+			"Visit our forums for updates, support, and resources:\n"
 			""FORUMS"\n";
 			return false;
 		}
