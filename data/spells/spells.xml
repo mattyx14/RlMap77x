@@ -43,6 +43,7 @@
 	<!-- Attack Spells -->
 	<instant name="Force Strike" words="exori mort" mana="20" maglv="2" prem="1" direction="1" blockwalls="1" exhaustion="1000" needlearn="0" event="script" value="attack/force strike.lua">
 		<vocation id="1;5"/>
+		<vocation id="2;6"/>
 	</instant>
 	<instant name="Flame Strike" words="exori flam" mana="20" maglv="3" prem="1" direction="1" blockwalls="1" exhaustion="1000" needlearn="0" event="script" value="attack/flame strike.lua">
 		<vocation id="1;5"/>
@@ -50,6 +51,7 @@
 	</instant>
 	<instant name="Energy Strike" words="exori vis" mana="20" maglv="3" prem="1" direction="1" blockwalls="1" exhaustion="1000" needlearn="0" event="script" value="attack/energy strike.lua">
 		<vocation id="1;5"/>
+		<vocation id="2;6"/>
 	</instant>
 	<instant name="Fire Wave" words="exevo flam hur" mana="80" direction="1" exhaustion="2000" needlearn="0" event="script" value="attack/fire wave.lua">
 		<vocation id="1;5"/>
@@ -58,7 +60,7 @@
 		<vocation id="1;5"/>
 		<vocation id="2;6"/>
 	</instant>
-	<instant name="Berserk" words="exori" maglv="5" levelpercent="400" prem="1" exhaustion="2000" needlearn="0" event="script" value="attack/berserk.lua">
+	<instant name="Berserk" words="exori" maglv="5" manapercent="90" prem="1" exhaustion="2000" needlearn="0" event="script" value="attack/berserk.lua">
 		<vocation id="4;8"/>
 	</instant>
 	<instant name="Energy Wave" words="exevo mort hur" maglv="20" mana="250" direction="1" exhaustion="2000" needlearn="0" event="script" value="attack/energy wave.lua">
@@ -69,6 +71,9 @@
 	</instant>
 	<instant name="Poison Storm" words="exevo gran mas pox" maglv="28" mana="600" prem="1" selftarget="1" exhaustion="2000" needlearn="0" event="script" value="attack/poison storm.lua">
 		<vocation id="2;6"/>
+	</instant>
+	<instant name="Energy Beam" words="exevo vis lux" lvl="23" mana="40" direction="1" exhaustion="1965" needlearn="0" event="script" value="attack/energy beam.lua">
+		<vocation id="1;5"/>
 	</instant>
 
 	<!-- Healing Spells -->
