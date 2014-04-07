@@ -7,9 +7,7 @@
 	<rune name="Fire Field" id="2301" allowfaruse="1" charges="3" maglv="1" exhaustion="2000" blocktype="solid" event="script" value="attack/fire field.lua"/>
 	<rune name="Firebomb" id="2305" allowfaruse="1" charges="2" maglv="5" exhaustion="2000" blocktype="solid" event="script" value="attack/fire bomb.lua"/>
 	<rune name="Fire Wall" id="2303" allowfaruse="1" charges="4" maglv="6" exhaustion="2000" blocktype="solid" event="script" value="attack/fire wall.lua"/>
-	<!--
 	<rune name="Soulfire" id="2308" allowfaruse="1" charges="2" maglv="7" exhaustion="2000" needtarget="1" blocktype="solid" event="function" value="soulfire"/>
-	-->
 	<rune name="Envenom" id="2292" allowfaruse="1" charges="3" maglv="4" exhaustion="2000" needtarget="1" blocktype="solid" event="script" value="attack/envenom rune.lua"/>
 	<rune name="Fireball" id="2302" allowfaruse="1" charges="3" maglv="3" exhaustion="2000" blocktype="solid" event="script" value="attack/fireball.lua"/>
 	<rune name="Great Fireball" id="2304" allowfaruse="1" charges="3" maglv="3" exhaustion="2000" blocktype="solid" event="script" value="attack/great fireball.lua"/>

@@ -335,7 +335,6 @@ bool ConfigManager::load()
 	m_confNumber[PACKETS_PER_SECOND] = getGlobalNumber("packetsPerSecond", 50);
 	m_confBool[SAVE_STATEMENT] = getGlobalBool("logPlayersStatements", true);
 	m_confNumber[GUI_PREMIUM_DAYS] = getGlobalNumber("premiumDaysToAddByGui", 30);
-	m_confNumber[LEVEL_TO_OFFLINE] = getGlobalNumber("levelToOfflineTraining", 8);
 	m_confBool[MANUAL_ADVANCED_CONFIG] = getGlobalBool("manualVersionConfig", false);
 	m_confNumber[VERSION_MIN] = getGlobalNumber("versionMin", CLIENT_VERSION_MIN);
 	m_confNumber[VERSION_MAX] = getGlobalNumber("versionMax", CLIENT_VERSION_MAX);
@@ -346,9 +345,8 @@ bool ConfigManager::load()
 	m_confBool[AUTO_STACK] = getGlobalBool("autoStack", true);
 	m_confBool[RUNES_HIT_TOP_CREATURE] = getGlobalBool("runesHitTopCreature", false);
 	m_confBool[CHARLIST_INFO] = getGlobalBool("charlistBasicInfo", false);
-	m_confBool[NO_ATTACKHEALING_SIMULTANEUS] = getGlobalBool("noAttackHealingSimultaneus", true);
-	m_confBool[ENABLE_COOLDOWNS] = getGlobalBool("enableCooldowns", true);
 	m_confBool[CLASSIC_DAMAGE_ON_WEAPONS] = getGlobalBool("classicDamageOnWeapons", true);
+	m_confBool[ATTACK_IMMEDIATELY_AFTER_LOGGING_IN] = getGlobalBool("attackImmediatelyAfterLoggingIn", false);
 
 	m_loaded = true;
 	return true;

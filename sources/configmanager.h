@@ -192,7 +192,6 @@ class ConfigManager
 			PACKETS_PER_SECOND,
 			VERSION_MIN,
 			VERSION_MAX,
-			LEVEL_TO_OFFLINE,
 			LAST_NUMBER_CONFIG /* this must be the last one */
 		};
 
@@ -318,9 +317,8 @@ class ConfigManager
 			USE_STAMINA,
 			AUTO_STACK,
 			RUNES_HIT_TOP_CREATURE,
-			NO_ATTACKHEALING_SIMULTANEUS,
-			ENABLE_COOLDOWNS,
 			CLASSIC_DAMAGE_ON_WEAPONS,
+			ATTACK_IMMEDIATELY_AFTER_LOGGING_IN,
 			LAST_BOOL_CONFIG /* this must be the last one */
 		};
 
