@@ -284,7 +284,7 @@ ReturnValue Combat::canDoCombat(const Creature* attacker, const Creature* target
 	}
 	else if(target->getMonster())
 	{
-		if(!target->isAttackable())
+		if(attacker->getMonster() && !target->getPlayerMaster() && !attacker->getPlayerMaster())
 			return RET_YOUMAYNOTATTACKTHISCREATURE;
 
 		const Player* attackerPlayer = NULL;
@@ -355,12 +355,6 @@ ReturnValue Combat::canTargetCreature(const Player* player, const Creature* targ
 	{
 		if(player->getSecureMode() == SECUREMODE_ON)
 			return RET_TURNSECUREMODETOATTACKUNMARKEDPLAYERS;
-	}
-
-	if(!g_config.getBool(ConfigManager::ATTACK_IMMEDIATELY_AFTER_LOGGING_IN))
-	{
-		if(player->checkLoginDelay())
-			return RET_YOUMAYNOTATTACKIMMEDIATELYAFTERLOGGINGIN;
 	}
 
 	return Combat::canDoCombat(player, target, true);
@@ -1429,21 +1423,16 @@ bool MagicField::isBlocking(const Creature* creature) const
 	return false;
 }
 
-void MagicField::onStepInField(Creature* creature, bool purposeful/* = true*/)
+void MagicField::onStepInField(Creature* creature)
 {
-	if(!creature)
-		return;
-
-	if(isUnstepable() || isBlocking(creature))
+	//remove magic walls/wild growth
+	if(isUnstepable() || id == ITEM_MAGICWALL || id == ITEM_WILDGROWTH || id == ITEM_MAGICWALL_SAFE || id == ITEM_WILDGROWTH_SAFE || isBlocking(creature))
 	{
 		if(!creature->isGhost())
 			g_game.internalRemoveItem(creature, this, 1);
 
 		return;
 	}
-
-	if(!purposeful || !creature->isAttackable())
-		return;
 
 	const ItemType& it = items[id];
 	if(!it.condition)

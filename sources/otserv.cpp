@@ -139,8 +139,8 @@ bool argumentsHandler(StringVec args)
 
 		if((*it) == "--version" || (*it) == "-v")
 		{
-			std::clog << "The " << SOFTWARE_NAME << " Version: (" << SOFTWARE_VERSION << "." << MINOR_VERSION << PATCH_VERSION << " - " << REVISION_VERSION << ") - Codename: (" << SOFTWARE_CODENAME << ")\n"
-			"Compilied with " << BOOST_COMPILER << " for arch "
+			std::clog << "The " << SOFTWARE_NAME << " Version: (" << SOFTWARE_VERSION << "." << MINOR_VERSION << "." << PATCH_VERSION << " - " << REVISION_VERSION << ") - Codename: (" << SOFTWARE_CODENAME << ")\n"
+			"Compiled with " << BOOST_COMPILER << " for arch "
 			#if defined(__amd64__) || defined(_M_X64)
 			"64 Bits"
 			#elif defined(__i386__) || defined(_M_IX86) || defined(_X86_)
@@ -151,9 +151,8 @@ bool argumentsHandler(StringVec args)
 			" at " << __DATE__ << " " << __TIME__ << "\n"
 
 			"\n"
-			"A server developed by: "SOFTWARE_DEVELOPERS".\n"
-			"Visit our forums for updates, support, and resources:\n"
-			""FORUMS"\n";
+			"A server developed by: " SOFTWARE_DEVELOPERS ".\n"
+			"Visit for updates, support, and resources: " GIT_REPO "\n";
 			return false;
 		}
 
@@ -317,7 +316,7 @@ void serverMain(void* param)
 	g_config.startup();
 
 #ifdef __OTSERV_ALLOCATOR_STATS__
-	//boost::thread(boost::bind(&allocatorStatsThread, (void*)NULL));
+	boost::thread(boost::bind(&allocatorStatsThread, (void*)NULL));
 	// TODO: this thread needs a shutdown (timed_lock + interrupt? .interrupt + .unlock)
 #endif
 #ifdef __EXCEPTION_TRACER__
@@ -411,8 +410,8 @@ ServiceManager* services)
 	}
 #endif
 
-	std::clog << "The " << SOFTWARE_NAME << " Version: (" << SOFTWARE_VERSION << "." << MINOR_VERSION << PATCH_VERSION << " - " << REVISION_VERSION << ") - Codename: (" << SOFTWARE_CODENAME << ")" << std::endl
-		<< "Compilied with " << BOOST_COMPILER << " for arch "
+	std::clog << "The " << SOFTWARE_NAME << " Version: (" << SOFTWARE_VERSION << "." << MINOR_VERSION << "." << PATCH_VERSION << " - " << REVISION_VERSION << ") - Codename: (" << SOFTWARE_CODENAME << ")" << std::endl
+		<< "Compiled with " << BOOST_COMPILER << " for arch "
 		#if defined(__amd64__) || defined(_M_X64)
 		"64 Bits"
 		#elif defined(__i386__) || defined(_M_IX86) || defined(_X86_)
@@ -423,9 +422,8 @@ ServiceManager* services)
 		" at " << __DATE__ << " " << __TIME__ << std::endl
 
 		<< std::endl
-		<< "A server developed by: "SOFTWARE_DEVELOPERS"." << std::endl
-		<< "Visit our forums for updates, support, and resources:" << std::endl
-		<< ""FORUMS"" << std::endl;
+		<< "A server developed by: " SOFTWARE_DEVELOPERS "." << std::endl
+		<< "Visit for updates, support, and resources: " GIT_REPO "" << std::endl;
 	std::stringstream ss;
 #ifdef __DEBUG__
 	ss << " GLOBAL";
@@ -661,6 +659,104 @@ ServiceManager* services)
 	}
 	else
 		startupErrorMessage("Couldn't estabilish connection to SQL database!");
+
+	std::clog << ">> Checking for duplicated items" << std::endl;
+#if defined(WINDOWS) && !defined(_CONSOLE)
+	SendMessage(GUI::getInstance()->m_statusBar, WM_SETTEXT, 0, (LPARAM)">> Checking for duplicated items");
+#endif
+	DBQuery query;
+	query << "SELECT unitedItems.serial, COUNT(1) AS duplicatesCount FROM (SELECT serial FROM `player_items` UNION ALL SELECT serial FROM `player_depotitems` UNION ALL SELECT serial FROM `tile_items`) unitedItems GROUP BY unitedItems.serial HAVING COUNT(1) > 1;";
+	std::string logText = "";
+
+	DBResult* result;
+	bool duplicated = false;
+
+	if (result = db->storeQuery(query.str()))
+	{
+		do
+		{
+			std::string serial = result->getDataString("serial");
+			if (serial != "" && serial.length() > 1)
+			{
+				DBResult* result_;
+				DBQuery query_playeritems;
+				query_playeritems << "SELECT `player_id`, `pid`, `sid`, `itemtype`, `count`, `attributes`, `serial` FROM `player_items` WHERE `serial` = " << db->escapeString(serial) << ";";
+				if (result_ = db->storeQuery(query_playeritems.str()))
+				{
+					duplicated = true;
+					do
+					{
+						std::string name;
+						IOLoginData::getInstance()->getNameByGuid((uint32_t)result_->getDataInt("player_id"), name, false);
+						std::clog << ">> Deleted item from 'player_items' with SERIAL: [" << serial.c_str() << "] PLAYER: [" << result_->getDataInt("player_id") << "] PLAYER NAME: [" << name.c_str() << "] ITEM: [" << result_->getDataInt("itemtype") << "] COUNT: [" << result_->getDataInt("count") << "]" << std::endl;
+						std::stringstream logText;
+						logText << "Deleted item from 'player_items' with SERIAL: [" << serial << "] PLAYER: [" << result_->getDataInt("player_id") << "] PLAYER NAME: [" << name << "] ITEM: [" << result_->getDataInt("itemtype") << "] COUNT: [" << result_->getDataInt("count") << "]";
+						Logger::getInstance()->eFile("anti_dupe.log", logText.str(), true);
+					} while (result_->next());
+					result_->free();
+				}
+
+				query_playeritems.clear();
+				DBQuery query_playerdepotitems;
+				query_playerdepotitems << "SELECT `player_id`, `sid`, `pid`, `itemtype`, `count`, `attributes`, `serial` FROM `player_depotitems` WHERE `serial` = " << db->escapeString(serial) << ";";
+				if (result_ = db->storeQuery(query_playerdepotitems.str()))
+				{
+					duplicated = true;
+					do
+					{
+						std::string name;
+						IOLoginData::getInstance()->getNameByGuid((uint32_t)result_->getDataInt("player_id"), name, false);
+						std::clog << ">> Deleted item from 'player_depotitems' with SERIAL: [" << serial.c_str() << "] PLAYER: [" << result_->getDataInt("player_id") << "] PLAYER NAME: [" << name.c_str() << "] ITEM: [" << result_->getDataInt("itemtype") << "] COUNT: [" << result_->getDataInt("count") << "]" << std::endl;
+						std::stringstream logText;
+						logText << "Deleted item from 'player_depotitems' with SERIAL: [" << serial << "] PLAYER: [" << result_->getDataInt("player_id") << "] PLAYER NAME: [" << name << "] ITEM: [" << result_->getDataInt("itemtype") << "] COUNT: [" << result_->getDataInt("count") << "]";
+						Logger::getInstance()->eFile("anti_dupe.log", logText.str(), true);
+					} while (result_->next());
+					result_->free();
+				}
+
+				query_playerdepotitems.clear();
+				DBQuery query_tileitems;
+				query_tileitems << "SELECT `tile_id`, `world_id`, `sid`, `pid`, `itemtype`, `count`, `attributes`, `serial` FROM `tile_items` WHERE `serial` = " << db->escapeString(serial) << ";";
+				if (result_ = db->storeQuery(query_tileitems.str()))
+				{
+					duplicated = true;
+					do
+					{
+						std::clog << ">> Deleted item from 'tile_items' with SERIAL: [" << serial.c_str() << "] TILE ID: [" << result_->getDataInt("tile_id") << "] WORLD ID: [" << result_->getDataInt("world_id") << "] ITEM: [" << result_->getDataInt("itemtype") << "] COUNT: [" << result_->getDataInt("count") << "]" << std::endl;
+						std::stringstream logText;
+						logText << "Deleted item from 'tile_items' with SERIAL: [" << serial << "] TILE ID: [" << result_->getDataInt("tile_id") << "] WORLD ID: [" << result_->getDataInt("world_id") << "] ITEM: [" << result_->getDataInt("itemtype") << "] COUNT: [" << result_->getDataInt("count") << "]";
+						Logger::getInstance()->eFile("anti_dupe.log", logText.str(), true);
+					} while (result_->next());
+					result_->free();
+				}
+
+				query_tileitems.clear();
+				DBQuery query_deletepi;
+				query_deletepi << "DELETE FROM `player_items` WHERE `serial` = " << db->escapeString(serial) << ";";
+				if (!db->query(query_deletepi.str()))
+					std::clog << ">> Cannot delete duplicated items from 'player_items'!" << std::endl;
+
+				query_deletepi.clear();
+				DBQuery query_deletedi;
+				query_deletedi << "DELETE FROM `player_depotitems` WHERE `serial` = " << db->escapeString(serial) << ";";
+				if (!db->query(query_deletedi.str()))
+					std::clog << ">> Cannot delete duplicated items from 'player_depotitems'!" << std::endl;
+
+				query_deletedi.clear();
+				DBQuery query_deleteti;
+				query_deleteti << "DELETE FROM `tile_items` WHERE `serial` = " << db->escapeString(serial) << ";";
+				if (!db->query(query_deleteti.str()))
+					std::clog << ">> Cannot delete duplicated items from 'tile_items'!" << std::endl;
+
+				query_deleteti.clear();
+			}
+		} while (result->next());
+		result->free();
+		if (duplicated)
+			std::clog << ">> Duplicated items successfully removed." << std::endl;
+	}
+	else
+		std::clog << ">> There wasn't duplicated items in the server." << std::endl;
 
 	std::clog << ">> Loading groups" << std::endl;
 	#if defined(WINDOWS) && !defined(_CONSOLE)
@@ -1047,8 +1143,8 @@ LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT message, WPARAM wParam, LPARAM 
 					{
 						GUI::getInstance()->m_logText = "";
 						GUI::getInstance()->m_lineCount = 0;
-						std::clog << "The " << SOFTWARE_NAME << " Version: (" << SOFTWARE_VERSION << "." << MINOR_VERSION << PATCH_VERSION << " - " << REVISION_VERSION << ") - Codename: (" << SOFTWARE_CODENAME << ")" << std::endl
-						<< "Compilied with " << BOOST_COMPILER << " for arch "
+						std::clog << "The " << SOFTWARE_NAME << " Version: (" << SOFTWARE_VERSION << "." << MINOR_VERSION << "." << PATCH_VERSION << " - " << REVISION_VERSION << ") - Codename: (" << SOFTWARE_CODENAME << ")" << std::endl
+						<< "Compiled with " << BOOST_COMPILER << " for arch "
 						#if defined(__amd64__) || defined(_M_X64)
 						"64 Bits"
 						#elif defined(__i386__) || defined(_M_IX86) || defined(_X86_)
@@ -1059,10 +1155,8 @@ LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT message, WPARAM wParam, LPARAM 
 						" at " << __DATE__ << " " << __TIME__ << std::endl
 
 						<< std::endl
-						<< "A server developed by: "SOFTWARE_DEVELOPERS"." << std::endl
-						<< "Visit our forums for updates, support, and resources:" << std::endl
-						<< ""FORUMS"" << std::endl
-						<< std::endl;
+						<< "A server developed by: " SOFTWARE_DEVELOPERS "." << std::endl
+						<< "Visit for updates, support, and resources: " GIT_REPO "" << std::endl;
 					}
 
 					break;
@@ -1385,14 +1479,14 @@ LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT message, WPARAM wParam, LPARAM 
 
 				case ID_MENU_ABOUT_SERVER:
 				{
-					MessageBox(NULL, "The "SOFTWARE_NAME" is a custom OpenTibia Server.\n"
-					"The current server version is "SOFTWARE_VERSION"."MINOR_VERSION""PATCH_VERSION" - "REVISION_VERSION, "The "SOFTWARE_NAME, MB_OK);
+					MessageBox(NULL, "The " SOFTWARE_NAME " is a custom OpenTibia Server.\n"
+					"The current server version is " SOFTWARE_VERSION "." MINOR_VERSION "." PATCH_VERSION " - " REVISION_VERSION , "The " SOFTWARE_NAME , MB_OK);
 					break;
 				}
 
 				case ID_MENU_ABOUT_DEVELOPERS:
 				{
-					MessageBox(NULL, "The developers of The "SOFTWARE_NAME" are:\n"
+					MessageBox(NULL, "The developers of The " SOFTWARE_NAME " are:\n"
 					SOFTWARE_DEVELOPERS".", "Developers", MB_OK);
 					break;
 				}

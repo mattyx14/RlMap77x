@@ -23,7 +23,7 @@
 	sqlKeepAlive = 0
 	mysqlReadTimeout = 10
 	mysqlWriteTimeout = 10
-	mysqlReconnectionAttempts = 3
+	mysqlReconnectionAttempts = 5
 	encryptionType = "sha1" --// encryptionType can be (plain, md5, sha1, sha256 or sha512).
 
 	-- World / Ip / Port
@@ -59,15 +59,6 @@
 	fragsSecondToRedSkull = 5
 	fragsThirdToRedSkull = 10
 	redSkullLength = 3 * 24 * 60 * 60
-
-	-- Black Skull Config
-	fragsToBlackSkull = 6
-	fragsSecondToBlackSkull = 10
-	fragsThirdToBlackSkull = 20
-	blackSkulledDeathHealth = 40
-	blackSkulledDeathMana = 0
-	blackSkullLength = 6 * 24 * 60 * 60
-	useBlackSkull = true
 
 	-- Banishment Config
 	-- killsBanLength works only if useBlackSkull option is disabled.
@@ -157,9 +148,9 @@
 		playerFollowExhaust = 2000
 
 		-- 8.7x + config
-		tibiaClassicSlots = true
 		monsterSpawnWalkback = true
 		allowBlockSpawn = true
+		classicEquipmentSlots = true
 
 		-- Summons and monsters
 		NoShareExpSummonMonster = false
@@ -167,6 +158,8 @@
 		-- Others
 		enableLootBagDisplay = false
 		attackImmediatelyAfterLoggingIn = false
+		exhaustionNPC = true
+		exhaustionInSecondsNPC = 0.5
 
 		-- Old Configs
 		tileHeightBlock = true
@@ -175,6 +168,10 @@
 		runesHitTopCreature = false
 		charlistBasicInfo = false
 		classicDamageOnWeapons = true
+
+		-- ConfigSpells
+		noAttackHealingSimultaneus = true
+		enableCooldowns = true
 
 	-- Connection config
 	loginTries = 20
@@ -189,6 +186,7 @@
 	forceSlowConnectionsToDisconnect = false
 	premiumPlayerSkipWaitList = true
 	packetsPerSecond = 50
+	loginProtectionTime = 10
 
 	-- Deathlist
 	deathListEnabled = true
@@ -233,7 +231,7 @@
 	-- Map
 	-- NOTE: storeTrash costs more memory, but will perform alot faster cleaning.
 	-- houseDataStorage usage may be found at how-use-internal-functions.log
-	mapAuthor = "Kaiser"
+	mapAuthor = "Mattyx14"
 	randomizeTiles = true
 	houseDataStorage = "binary-tilebased"
 	storeTrash = true
@@ -284,8 +282,6 @@
 	-- Outfits
 	allowChangeOutfit = true
 	allowChangeColors = true
-	allowChangeAddons = true
-	addonsOnlyPremium = true
 
 	-- Ghost mode
 	ghostModeInvisibleEffect = false
@@ -365,7 +361,6 @@
 	globalSaveMinute = 0
 	shutdownAtGlobalSave = true
 	cleanMapAtGlobalSave = false
-	closeInstanceOnShutdown = true
 
 	-- Spawns
 	minRateSpawn = 1
@@ -386,7 +381,7 @@
 	runFile = "server/run.log"
 	outputLog = "server/out.log"
 	truncateLogOnStartup = false
-	logPlayersStatements = true
+	logPlayersStatements = false
 
 	-- Manager
 	-- NOTE: managerPassword left blank disables manager.

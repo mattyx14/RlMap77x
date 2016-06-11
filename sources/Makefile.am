@@ -3,7 +3,7 @@ noinst_PROGRAMS = theotxserver
 CXXFLAGS = -pipe -g
 AM_CXXFLAGS = $(XML_CPPFLAGS) $(OTSERV_FLAGS) $(LUA_CFLAGS) $(DEBUG_FLAGS)\
 $(MYSQL_FLAGS) $(MYSQLPP_FLAGS) $(SQLITE_FLAGS) $(PGSQL_FLAGS) $(PROFILER_FLAGS)\
-$(OPTIONAL_FLAGS) -D_THREAD_SAFE -D_REENTRANT -Wall -Wextra -Wno-strict-aliasing
+$(OPTIONAL_FLAGS) -D_THREAD_SAFE -D_REENTRANT -Wall -Wextra -Wno-strict-aliasing -Wno-unused-parameter -Wno-array-bounds -pthread
 
 theotxserver_LDADD = $(LUA_LIBS)
 
@@ -44,7 +44,7 @@ theotxserver_SOURCES = account.h actions.cpp actions.h  baseevents.cpp baseevent
 	protocol.cpp protocol.h protocolgame.cpp protocolgame.h \
 	protocollogin.cpp protocollogin.h raids.cpp raids.h \
 	resources.h scheduler.cpp scheduler.h scriptmanager.cpp \
-	scriptmanager.h server.cpp server.h spawn.cpp spawn.h \
+	scriptmanager.h server.cpp server.h spawn.cpp spawn.h spectators.cpp spectators.h \
 	spells.cpp spells.h status.cpp status.h talkaction.cpp talkaction.h teleport.cpp \
 	teleport.h templates.h textlogger.cpp textlogger.h thing.cpp thing.h \
 	tile.cpp tile.h tools.cpp tools.h town.h trashholder.cpp trashholder.h \

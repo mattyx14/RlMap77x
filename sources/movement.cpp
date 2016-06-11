@@ -947,7 +947,7 @@ uint32_t MoveEvent::StepInField(Creature* creature, Item* item)
 {
 	if(MagicField* field = item->getMagicField())
 	{
-		field->onStepInField(creature, creature->getPlayer() != NULL);
+		field->onStepInField(creature);
 		return 1;
 	}
 

@@ -234,9 +234,7 @@ void Game::setGameState(GameState_t newState)
 
 				Houses::getInstance()->check();
 				saveGameState((uint8_t)SAVE_PLAYERS | (uint8_t)SAVE_MAP | (uint8_t)SAVE_STATE);
-
-				if(g_config.getBool(ConfigManager::CLOSE_INSTANCE_ON_SHUTDOWN))
-					Dispatcher::getInstance().addTask(createTask(boost::bind(&Game::shutdown, this)));
+				Dispatcher::getInstance().addTask(createTask(boost::bind(&Game::shutdown, this)));
 
 				Scheduler::getInstance().stop();
 				Dispatcher::getInstance().stop();
@@ -1532,6 +1530,9 @@ bool Game::playerMoveItem(uint32_t playerId, const Position& fromPos,
 		}
 	}
 
+	if(!g_creatureEvents->executeMoveItems(player, item, mapFromPos, mapToPos))
+		return false;
+
 	bool deny = false;
 	CreatureEventList throwEvents = player->getCreatureEvents(CREATURE_EVENT_THROW);
 	for(CreatureEventList::iterator it = throwEvents.begin(); it != throwEvents.end(); ++it)
@@ -2198,7 +2199,7 @@ Item* Game::transformItem(Item* item, uint16_t newId, int32_t newCount/* = -1*/)
 	if(curType.type == newType.type)
 	{
 		//Both items has the same type so we can safely change id/subtype
-		if(!newCount && (item->isStackable() || item->hasCharges()))
+		if(!newCount && (item->isStackable() || (curType.charges > 0)))
 		{
 			if(!item->isStackable() && (!item->getDefaultDuration() || item->getDuration() <= 0))
 			{
@@ -2423,6 +2424,7 @@ bool Game::playerCloseChannel(uint32_t playerId, uint16_t channelId)
 		return false;
 
 	g_chat.removeUserFromChannel(player, channelId);
+	player->client->chat(channelId);
 	return true;
 }
 
@@ -3225,8 +3227,8 @@ bool Game::playerAcceptTrade(uint32_t playerId)
 		tradeItems.erase(it);
 	}
 
-	ReturnValue ret1 = internalAddItem(player, tradePartner, tradeItem1, INDEX_WHEREEVER, FLAG_IGNOREAUTOSTACK, true);
-	ReturnValue ret2 = internalAddItem(tradePartner, player, tradeItem2, INDEX_WHEREEVER, FLAG_IGNOREAUTOSTACK, true);
+	ReturnValue ret1 = internalAddItem(player, tradePartner, tradeItem1, INDEX_WHEREEVER, 0, true);
+	ReturnValue ret2 = internalAddItem(tradePartner, player, tradeItem2, INDEX_WHEREEVER, 0, true);
 
 	bool success = false;
 	if(ret1 == RET_NOERROR && ret2 == RET_NOERROR)
@@ -3267,13 +3269,14 @@ bool Game::playerAcceptTrade(uint32_t playerId)
 	player->setTradeState(TRADE_NONE);
 	player->tradeItem = NULL;
 	player->tradePartner = NULL;
+	player->sendTradeClose();
+	IOLoginData::getInstance()->savePlayer(player);
 
 	tradePartner->setTradeState(TRADE_NONE);
 	tradePartner->tradeItem = NULL;
 	tradePartner->tradePartner = NULL;
-
-	player->sendTradeClose();
 	tradePartner->sendTradeClose();
+	IOLoginData::getInstance()->savePlayer(tradePartner);
 	return success;
 }
 

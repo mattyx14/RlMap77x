@@ -175,7 +175,6 @@ bool ConfigManager::load()
 	m_confDouble[EFP_MAX_THRESHOLD] = getGlobalDouble("maxLevelThresholdForKilledPlayer", 1.1f);
 	m_confBool[SHUTDOWN_AT_GLOBALSAVE] = getGlobalBool("shutdownAtGlobalSave", false);
 	m_confBool[CLEAN_MAP_AT_GLOBALSAVE] = getGlobalBool("cleanMapAtGlobalSave", true);
-	m_confBool[CLOSE_INSTANCE_ON_SHUTDOWN] = getGlobalBool("closeInstanceOnShutdown", true);
 	m_confBool[FREE_PREMIUM] = getGlobalBool("freePremium", false);
 	m_confNumber[PROTECTION_LEVEL] = getGlobalNumber("protectionLevel", 1);
 	m_confNumber[STATUSQUERY_TIMEOUT] = getGlobalNumber("statusTimeout", 300000);
@@ -199,7 +198,6 @@ bool ConfigManager::load()
 	m_confString[HOUSE_STORAGE] = getGlobalString("houseDataStorage", "binary");
 	m_confNumber[RED_SKULL_LENGTH] = getGlobalNumber("redSkullLength", 2592000);
 	m_confNumber[MAX_VIOLATIONCOMMENT_SIZE] = getGlobalNumber("maxViolationCommentSize", 60);
-	m_confNumber[BLACK_SKULL_LENGTH] = getGlobalNumber("blackSkullLength", 3888000);
 	m_confNumber[NOTATIONS_TO_BAN] = getGlobalNumber("notationsToBan", 3);
 	m_confNumber[WARNINGS_TO_FINALBAN] = getGlobalNumber("warningsToFinalBan", 4);
 	m_confNumber[WARNINGS_TO_DELETION] = getGlobalNumber("warningsToDeletion", 5);
@@ -247,7 +245,6 @@ bool ConfigManager::load()
 	m_confNumber[STAMINA_LIMIT_BOTTOM] = getGlobalNumber("staminaRatingLimitBottom", 840);
 	m_confBool[DISPLAY_LOGGING] = getGlobalBool("displayPlayersLogging", true);
 	m_confBool[STAMINA_BONUS_PREMIUM] = getGlobalBool("staminaThresholdOnlyPremium", true);
-	m_confNumber[ALLOWED_MAX_PACKETS] = getGlobalNumber("allowedMaxSizePackets", 3);
 	m_confNumber[BLESS_REDUCTION_BASE] = getGlobalNumber("blessingReductionBase", 30);
 	m_confNumber[BLESS_REDUCTION_DECREMENT] = getGlobalNumber("blessingReductionDecrement", 5);
 	m_confNumber[BLESS_REDUCTION] = getGlobalNumber("eachBlessReduction", 8);
@@ -273,14 +270,9 @@ bool ConfigManager::load()
 	m_confNumber[RED_LIMIT] = getGlobalNumber("fragsToRedSkull", 3);
 	m_confNumber[RED_SECOND_LIMIT] = getGlobalNumber("fragsSecondToRedSkull", 5);
 	m_confNumber[RED_THIRD_LIMIT] = getGlobalNumber("fragsThirdToRedSkull", 10);
-	m_confNumber[BLACK_LIMIT] = getGlobalNumber("fragsToBlackSkull", m_confNumber[RED_LIMIT]);
-	m_confNumber[BLACK_SECOND_LIMIT] = getGlobalNumber("fragsSecondToBlackSkull", m_confNumber[RED_SECOND_LIMIT]);
-	m_confNumber[BLACK_THIRD_LIMIT] = getGlobalNumber("fragsThirdToBlackSkull", m_confNumber[RED_THIRD_LIMIT]);
 	m_confNumber[BAN_LIMIT] = getGlobalNumber("fragsToBanishment", m_confNumber[RED_LIMIT]);
 	m_confNumber[BAN_SECOND_LIMIT] = getGlobalNumber("fragsSecondToBanishment", m_confNumber[RED_SECOND_LIMIT]);
 	m_confNumber[BAN_THIRD_LIMIT] = getGlobalNumber("fragsThirdToBanishment", m_confNumber[RED_THIRD_LIMIT]);
-	m_confNumber[BLACK_SKULL_DEATH_HEALTH] = getGlobalNumber("blackSkulledDeathHealth", 40);
-	m_confNumber[BLACK_SKULL_DEATH_MANA] = getGlobalNumber("blackSkulledDeathMana", 0);
 	m_confNumber[DEATHLIST_REQUIRED_TIME] = getGlobalNumber("deathListRequiredTime", 60000);
 	m_confNumber[EXPERIENCE_SHARE_ACTIVITY] = getGlobalNumber("experienceShareActivity", 120000);
 	m_confBool[GHOST_SPELL_EFFECTS] = getGlobalBool("ghostModeSpellEffects", true);
@@ -315,7 +307,6 @@ bool ConfigManager::load()
 	m_confNumber[DEFAULT_DEPOT_SIZE] = getGlobalNumber("defaultDepotSize", 2000);
 	m_confBool[USE_CAPACITY] = getGlobalBool("useCapacity", true);
 	m_confBool[DAEMONIZE] = getGlobalBool("daemonize", false);
-	m_confBool[TIBIA_SLOTS] = getGlobalBool("tibiaClassicSlots", true);
 	m_confBool[SKIP_ITEMS_VERSION] = getGlobalBool("skipItemsVersionCheck", false);
 	m_confBool[SILENT_LUA] = getGlobalBool("disableLuaErrors", false);
 	m_confNumber[MAIL_ATTEMPTS] = getGlobalNumber("mailMaxAttempts", 20);
@@ -346,7 +337,10 @@ bool ConfigManager::load()
 	m_confBool[RUNES_HIT_TOP_CREATURE] = getGlobalBool("runesHitTopCreature", false);
 	m_confBool[CHARLIST_INFO] = getGlobalBool("charlistBasicInfo", false);
 	m_confBool[CLASSIC_DAMAGE_ON_WEAPONS] = getGlobalBool("classicDamageOnWeapons", true);
-	m_confBool[ATTACK_IMMEDIATELY_AFTER_LOGGING_IN] = getGlobalBool("attackImmediatelyAfterLoggingIn", false);
+	m_confBool[NO_ATTACKHEALING_SIMULTANEUS] = getGlobalBool("noAttackHealingSimultaneus", true);
+	m_confBool[ENABLE_COOLDOWNS] = getGlobalBool("enableCooldowns", true);
+	m_confNumber[LOGIN_PROTECTION_TIME] = getGlobalNumber("loginProtectionTime", 10);
+	m_confBool[CLASSIC_EQUIPMENT_SLOTS] = getGlobalBool("classicEquipmentSlots", false);
 
 	m_loaded = true;
 	return true;

@@ -35,8 +35,8 @@ extern Spells* g_spells;
 extern Monsters g_monsters;
 extern ConfigManager g_config;
 
-Spells::Spells():
-m_interface("Spell Interface")
+Spells::Spells() :
+	m_interface("Spell Interface")
 {
 	m_interface.initState();
 	spellId = 0;
@@ -320,7 +320,7 @@ bool BaseSpell::castSpell(Creature* creature, Creature* target)
 CombatSpell::CombatSpell(Combat* _combat, bool _needTarget, bool _needDirection) :
 	Event(&g_spells->getInterface())
 {
-	combat =_combat;
+	combat = _combat;
 	needTarget = _needTarget;
 	needDirection = _needDirection;
 }
@@ -438,11 +438,11 @@ bool CombatSpell::executeCastSpell(Creature* creature, const LuaVariant& var)
 		}
 		else
 		{
-			#ifdef __DEBUG_LUASCRIPTS__
+#ifdef __DEBUG_LUASCRIPTS__
 			char desc[60];
 			sprintf(desc, "onCastSpell - %s", creature->getName().c_str());
 			env->setEvent(desc);
-			#endif
+#endif
 
 			env->setScriptId(m_scriptId, m_interface);
 			env->setRealPos(creature->getPosition());
@@ -471,9 +471,9 @@ Spell::Spell()
 	magLevel = 0;
 	mana = 0;
 	manaPercent = 0;
-	#ifdef _MULTIPLATFORM76
+#ifdef _MULTIPLATFORM76
 	soul = 0;
-	#endif
+#endif
 	range = -1;
 	exhaustion = 1000;
 	needTarget = false;
@@ -549,10 +549,10 @@ bool Spell::configureSpell(xmlNodePtr p)
 	if(readXMLInteger(p, "manapercent", intValue))
 		manaPercent = intValue;
 
-	#ifdef _MULTIPLATFORM76
+#ifdef _MULTIPLATFORM76
 	if(readXMLInteger(p, "soul", intValue))
 		soul = intValue;
-	#endif
+#endif
 
 	if(readXMLInteger(p, "exhaustion", intValue))
 		exhaustion = intValue;
@@ -596,6 +596,50 @@ bool Spell::configureSpell(xmlNodePtr p)
 	if(readXMLString(p, "aggressive", strValue))
 		isAggressive = booleanString(strValue);
 
+	if(!g_config.getBool(ConfigManager::NO_ATTACKHEALING_SIMULTANEUS))
+	{
+		groupExhaustions[SPELLGROUP_ATTACK] = exhaustion;
+		groupExhaustions[SPELLGROUP_HEALING] = exhaustion;
+	}
+	else
+	{
+		if(readXMLString(p, "groups", strValue))
+		{
+			std::vector<std::string> strVector = explodeString(strValue, ";"), tmpVector;
+			for(std::vector<std::string>::iterator it = strVector.begin(); it != strVector.end(); ++it)
+			{
+				tmpVector = explodeString((*it), ",");
+				uint32_t id = atoi(tmpVector[0].c_str()), exhaust = isAggressive ? 2000 : 1000;
+				if(tmpVector.size() > 1)
+					exhaust = atoi(tmpVector[1].c_str());
+
+				if(!id)
+				{
+					strValue = asLowerCaseString(tmpVector[0]);
+					if(strValue == "attack" || strValue == "attacking")
+						id = SPELLGROUP_ATTACK;
+					else if(strValue == "heal" || strValue == "healing")
+						id = SPELLGROUP_HEALING;
+					else if(strValue == "support" || strValue == "supporting")
+						id = SPELLGROUP_SUPPORT;
+					else if(strValue == "special" || strValue == "ultimate")
+						id = SPELLGROUP_SPECIAL;
+				}
+
+				if(id && exhaust)
+					groupExhaustions[(SpellGroup_t)id] = exhaust;
+			}
+		}
+
+		if(groupExhaustions.empty())
+		{
+			if(isAggressive)
+				groupExhaustions[SPELLGROUP_ATTACK] = 2000;
+			else
+				groupExhaustions[SPELLGROUP_HEALING] = 1000;
+		}
+	}
+
 	std::string error;
 	for(xmlNodePtr vocationNode = p->children; vocationNode; vocationNode = vocationNode->next)
 	{
@@ -617,7 +661,6 @@ bool Spell::checkSpell(Player* player) const
 	if(!isEnabled())
 		return false;
 
-	bool exhausted = false;
 	if(isAggressive)
 	{
 		if(!player->hasFlag(PlayerFlag_IgnoreProtectionZone) && player->getZone() == ZONE_PROTECTION)
@@ -626,29 +669,53 @@ bool Spell::checkSpell(Player* player) const
 			return false;
 		}
 
-		if(!g_config.getBool(ConfigManager::ATTACK_IMMEDIATELY_AFTER_LOGGING_IN))
+		if(player->checkLoginDelay())
 		{
-			if(player->checkLoginDelay())
+			player->sendCancelMessage(RET_YOUMAYNOTATTACKIMMEDIATELYAFTERLOGGINGIN);
+			g_game.addMagicEffect(player->getPosition(), MAGIC_EFFECT_POFF);
+			return false;
+		}
+	}
+
+	if(!player->hasFlag(PlayerFlag_HasNoExhaustion))
+	{
+		bool exhausted = false;
+		if(!g_config.getBool(ConfigManager::NO_ATTACKHEALING_SIMULTANEUS))
+		{
+			if(player->hasCondition(CONDITION_EXHAUST, EXHAUST_SPELLGROUP_ATTACK) || player->hasCondition(CONDITION_EXHAUST, EXHAUST_SPELLGROUP_HEALING))
+				exhausted = true;
+		}
+		else
+		{
+			if(g_config.getBool(ConfigManager::ENABLE_COOLDOWNS))
 			{
-				player->sendCancelMessage(RET_YOUMAYNOTATTACKIMMEDIATELYAFTERLOGGINGIN);
-				g_game.addMagicEffect(player->getPosition(), MAGIC_EFFECT_POFF);
-				return false;
+				if(!player->hasCondition(CONDITION_SPELLCOOLDOWN, spellId))
+				{
+					for(SpellGroup::const_iterator it = groupExhaustions.begin(); it != groupExhaustions.end(); ++it)
+					{
+						if(!player->hasCondition(CONDITION_EXHAUST, (Exhaust_t)((int32_t)it->first + 1)))
+							continue;
+
+						exhausted = true;
+						break;
+					}
+				}
+				else
+					exhausted = true;
 			}
+			else if(player->hasCondition(CONDITION_EXHAUST, (isAggressive ? EXHAUST_SPELLGROUP_ATTACK : EXHAUST_SPELLGROUP_HEALING)))
+				exhausted = true;
 		}
 
-		if(player->hasCondition(CONDITION_EXHAUST, EXHAUST_COMBAT))
-			exhausted = true;
-	}
-	else if (player->hasCondition(CONDITION_EXHAUST, EXHAUST_HEALING))
-		exhausted = true;
+		if(exhausted)
+		{
+			player->sendCancelMessage(RET_YOUAREEXHAUSTED);
+			if(isInstant())
+				g_game.addMagicEffect(player->getPosition(), MAGIC_EFFECT_POFF);
 
-	if(exhausted && !player->hasFlag(PlayerFlag_HasNoExhaustion))
-	{
-		player->sendCancelMessage(RET_YOUAREEXHAUSTED);
-		if(isInstant())
-			g_game.addMagicEffect(player->getPosition(), MAGIC_EFFECT_POFF);
 
-		return false;
+			return false;
+		}
 	}
 
 	if(isPremium() && !player->isPremium())
@@ -689,14 +756,14 @@ bool Spell::checkSpell(Player* player) const
 		return false;
 	}
 
-	#ifdef _MULTIPLATFORM76
+#ifdef _MULTIPLATFORM76
 	if(player->getSoul() < soul && !player->hasFlag(PlayerFlag_HasInfiniteSoul))
 	{
 		player->sendCancelMessage(RET_NOTENOUGHSOUL);
 		g_game.addMagicEffect(player->getPosition(), MAGIC_EFFECT_POFF);
 		return false;
 	}
-	#endif
+#endif
 
 	if(isInstant() && isLearnable() && !player->hasLearnedInstantSpell(getName()))
 	{
@@ -717,20 +784,20 @@ bool Spell::checkSpell(Player* player) const
 
 	if(needWeapon)
 	{
-		switch(player->getWeaponType())
+		switch (player->getWeaponType())
 		{
-			case WEAPON_SWORD:
-			case WEAPON_CLUB:
-			case WEAPON_AXE:
-			case WEAPON_FIST:
-				break;
+		case WEAPON_SWORD:
+		case WEAPON_CLUB:
+		case WEAPON_AXE:
+		case WEAPON_FIST:
+			break;
 
-			default:
-			{
-				player->sendCancelMessage(RET_YOUNEEDAWEAPONTOUSETHISSPELL);
-				g_game.addMagicEffect(player->getPosition(), MAGIC_EFFECT_POFF);
-				return false;
-			}
+		default:
+		{
+			player->sendCancelMessage(RET_YOUNEEDAWEAPONTOUSETHISSPELL);
+			g_game.addMagicEffect(player->getPosition(), MAGIC_EFFECT_POFF);
+			return false;
+		}
 		}
 	}
 
@@ -948,17 +1015,39 @@ bool Spell::checkRuneSpell(Player* player, const Position& toPos)
 
 void Spell::postSpell(Player* player) const
 {
-	if(!player->hasFlag(PlayerFlag_HasNoExhaustion) && exhaustion > 0)
-		player->addExhaust(exhaustion, isAggressive ? EXHAUST_COMBAT : EXHAUST_HEALING);
+	if(!player->hasFlag(PlayerFlag_HasNoExhaustion))
+	{
+		if(!g_config.getBool(ConfigManager::NO_ATTACKHEALING_SIMULTANEUS))
+		{
+			if(exhaustion > 0)
+			{
+				player->addExhaust(exhaustion, EXHAUST_SPELLGROUP_ATTACK);
+				player->addExhaust(exhaustion, EXHAUST_SPELLGROUP_HEALING);
+			}
+		}
+		else
+		{
+			if(g_config.getBool(ConfigManager::ENABLE_COOLDOWNS))
+			{
+				for(SpellGroup::const_iterator it = groupExhaustions.begin(); it != groupExhaustions.end(); ++it)
+					player->addExhaust(it->second, (Exhaust_t)(it->first + 1));
+
+				if(exhaustion > 0)
+					player->addCooldown(exhaustion, spellId);
+			}
+			else if(exhaustion > 0)
+				player->addExhaust(exhaustion, (isAggressive ? EXHAUST_SPELLGROUP_ATTACK : EXHAUST_SPELLGROUP_HEALING));
+		}
+	}
 
 	if(isAggressive && !player->hasFlag(PlayerFlag_NotGainInFight))
 		player->addInFightTicks(false);
 
-	#ifdef _MULTIPLATFORM76
+#ifdef _MULTIPLATFORM76
 	postSpell(player, (uint32_t)getManaCost(player), (uint32_t)getSoulCost());
-	#else
+#else
 	postSpell(player, (uint32_t)getManaCost(player));
-	#endif
+#endif
 }
 
 #ifdef _MULTIPLATFORM76
@@ -975,10 +1064,10 @@ void Spell::postSpell(Player* player, uint32_t manaCost) const
 			player->addManaSpent(manaCost);
 	}
 
-	#ifdef _MULTIPLATFORM76
+#ifdef _MULTIPLATFORM76
 	if(soulCost > 0)
 		player->changeSoul(-(int32_t)soulCost);
-	#endif
+#endif
 }
 
 int32_t Spell::getManaCost(const Player* player) const
@@ -1283,11 +1372,11 @@ bool InstantSpell::executeCastSpell(Creature* creature, const LuaVariant& var)
 		}
 		else
 		{
-			#ifdef __DEBUG_LUASCRIPTS__
+#ifdef __DEBUG_LUASCRIPTS__
 			char desc[60];
 			sprintf(desc, "onCastSpell - %s", creature->getName().c_str());
 			env->setEvent(desc);
-			#endif
+#endif
 
 			env->setScriptId(m_scriptId, m_interface);
 			env->setRealPos(creature->getPosition());
@@ -1381,11 +1470,11 @@ bool InstantSpell::SummonMonster(const InstantSpell* spell, Creature* creature, 
 	ReturnValue ret = g_game.placeSummon(creature, param);
 	if(ret == RET_NOERROR)
 	{
-		#ifdef _MULTIPLATFORM76
+#ifdef _MULTIPLATFORM76
 		spell->postSpell(player, (uint32_t)manaCost, (uint32_t)spell->getSoulCost());
-		#else
+#else
 		spell->postSpell(player, (uint32_t)manaCost);
-		#endif
+#endif
 		g_game.addMagicEffect(player->getPosition(), MAGIC_EFFECT_WRAPS_BLUE);
 		return true;
 	}
@@ -1482,7 +1571,7 @@ bool InstantSpell::canCast(const Player* player) const
 	return player->hasLearnedInstantSpell(getName());
 }
 
-ConjureSpell::ConjureSpell(LuaInterface* _interface):
+ConjureSpell::ConjureSpell(LuaInterface* _interface) :
 	InstantSpell(_interface)
 {
 	isAggressive = false;
@@ -1650,8 +1739,8 @@ bool ConjureSpell::castInstant(Player* player, const std::string& param)
 	return executeCastSpell(player, var);
 }
 
-RuneSpell::RuneSpell(LuaInterface* _interface):
-Action(_interface)
+RuneSpell::RuneSpell(LuaInterface* _interface) :
+	Action(_interface)
 {
 	runeId = 0;
 	function = NULL;
@@ -1697,10 +1786,10 @@ bool RuneSpell::loadFunction(const std::string& functionName)
 		function = Illusion;
 	else if(tmpFunctionName == "convince")
 		function = Convince;
-	#ifdef _MULTIPLATFORM76
+#ifdef _MULTIPLATFORM76
 	else if(tmpFunctionName == "soulfire")
 		function = Soulfire;
-	#endif
+#endif
 	else
 	{
 		std::clog << "[Warning - RuneSpell::loadFunction] Function \"" << functionName << "\" does not exist." << std::endl;
@@ -1802,11 +1891,11 @@ bool RuneSpell::Convince(const RuneSpell* spell, Creature* creature, Item*, cons
 		return false;
 	}
 
-	#ifdef _MULTIPLATFORM76
+#ifdef _MULTIPLATFORM76
 	spell->postSpell(player, (uint32_t)manaCost, (uint32_t)spell->getSoulCost());
-	#else
+#else
 	spell->postSpell(player, (uint32_t)manaCost);
-	#endif
+#endif
 	g_game.addMagicEffect(player->getPosition(), MAGIC_EFFECT_WRAPS_RED);
 	return true;
 }
@@ -1963,11 +2052,11 @@ bool RuneSpell::executeCastSpell(Creature* creature, const LuaVariant& var)
 		}
 		else
 		{
-			#ifdef __DEBUG_LUASCRIPTS__
+#ifdef __DEBUG_LUASCRIPTS__
 			char desc[60];
 			sprintf(desc, "onCastSpell - %s", creature->getName().c_str());
 			env->setEvent(desc);
-			#endif
+#endif
 
 			env->setScriptId(m_scriptId, m_interface);
 			env->setRealPos(creature->getPosition());

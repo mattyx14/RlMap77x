@@ -50,6 +50,7 @@ Item* Container::clone() const
 	for(ItemList::const_iterator it = itemlist.begin(); it != itemlist.end(); ++it)
 		_item->addItem((*it)->clone());
 
+	_item->totalWeight = totalWeight;
 	return _item;
 }
 
@@ -348,7 +349,7 @@ ReturnValue Container::__queryMaxCount(int32_t index, const Thing* thing, uint32
 		}
 		else
 		{
-			const Thing* destThing = __getThing(index-1);
+			const Thing* destThing = __getThing(index);
 			const Item* destItem = NULL;
 			if(destThing)
 				destItem = destThing->getItem();
